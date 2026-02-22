@@ -4,644 +4,492 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tovian Educational Consult | CELPIP Coaching — Canada & Australia PR</title>
-  <meta name="description" content="Expert CELPIP coaching for Canada PR and Australia PR. Personalized sessions, proven strategies, 50+ students coached. Book your free consultation today." />
+  <meta name="description" content="Expert CELPIP coaching for Canada PR and Australia PR. 50+ students coached, 5+ years experience. Book your free consultation today — sessions via Zoom or Teams." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1A2B5E;--navy2:#142251;--navy3:#0E1A3D;
+  --green:#2E7D32;--green2:#43A047;--green3:#81C784;
+  --gold:#E8A020;--gold2:#F5B942;
+  --cream:#F8F6F0;--white:#FFFFFF;
+  --bg:#F0F4FF;--bg2:#E8F5E9;
+  --text:#3D4A5C;--muted:#6B7A8D;--light:#EDF2F7;
+  --success:#22C55E;--wa:#25D366;
+  --radius:14px;
+  --sh:0 4px 24px rgba(26,43,94,.10);
+  --sh-lg:0 16px 56px rgba(26,43,94,.16);
+  --tr:.32s cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;line-height:1.75}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;color:var(--navy);line-height:1.2}
+h1{font-size:clamp(2.6rem,5.5vw,5rem);font-weight:800}
+h2{font-size:clamp(2rem,3.5vw,3.2rem);font-weight:700}
+h3{font-size:1.35rem;font-weight:700}
+h4{font-size:1.1rem;font-weight:600}
+em{color:var(--green);font-style:italic}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{max-width:1180px;margin:0 auto;padding:0 2rem}
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+.tag{display:inline-block;background:rgba(26,43,94,.08);border:1.5px solid rgba(26,43,94,.15);color:var(--navy);padding:.35rem 1rem;border-radius:100px;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}
+.tag-g{background:rgba(46,125,50,.09);border-color:rgba(46,125,50,.22);color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem 2rem;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;transition:var(--tr);border:2px solid transparent;white-space:nowrap}
+.btn-primary{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(26,43,94,.32)}
+.btn-outline{background:transparent;border-color:var(--navy);color:var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#1eb85a;transform:translateY(-2px);box-shadow:0 12px 32px rgba(37,211,102,.35)}
+.btn-full{width:100%}
+.announce-bar{background:linear-gradient(90deg,var(--navy) 0%,var(--navy2) 55%,var(--green) 100%);color:#fff;text-align:center;padding:.65rem 2rem;font-size:.83rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;position:relative;z-index:1001}
+.announce-bar strong{color:var(--gold2)}
+.announce-cta{background:var(--gold);color:var(--navy);padding:.3rem .9rem;border-radius:100px;font-size:.77rem;font-weight:700;transition:var(--tr)}
+.announce-cta:hover{background:var(--gold2)}
+#navbar{position:fixed;top:36px;left:0;right:0;z-index:1000;padding:1rem 0;transition:all var(--tr)}
+#navbar.scrolled{top:0;background:rgba(255,255,255,.97);backdrop-filter:blur(18px);box-shadow:var(--sh);padding:.75rem 0}
+.nav-inner{max-width:1180px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{height:52px;width:auto;object-fit:contain;transition:height var(--tr)}
+#navbar.scrolled .nav-logo{height:44px}
+.nav-links{display:flex;list-style:none;align-items:center;gap:2rem}
+.nav-links a{font-size:.9rem;font-weight:600;color:var(--navy);transition:color var(--tr)}
+.nav-links a:hover{color:var(--green)}
+.nav-cta{background:var(--green)!important;color:#fff!important;padding:.5rem 1.3rem;border-radius:100px}
+.nav-cta:hover{background:var(--green2)!important;color:#fff!important;transform:translateY(-1px);box-shadow:0 6px 20px rgba(46,125,50,.3)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.burger span{display:block;width:26px;height:2.5px;background:var(--navy);border-radius:2px;transition:var(--tr)}
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:10rem 2rem 5rem;background:linear-gradient(155deg,#EEF3FF 0%,#E6F4E8 45%,#FFF8EC 100%)}
+.hero-bg{position:absolute;inset:0;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.22}
+.orb1{width:520px;height:520px;background:radial-gradient(circle,var(--navy),transparent);top:-120px;right:-100px;animation:float 9s ease-in-out infinite}
+.orb2{width:420px;height:420px;background:radial-gradient(circle,var(--green),transparent);bottom:-100px;left:-80px;animation:float 11s ease-in-out infinite reverse}
+.orb3{width:260px;height:260px;background:radial-gradient(circle,var(--gold),transparent);top:45%;right:22%;opacity:.14;animation:float 7s ease-in-out infinite}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(26,43,94,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(26,43,94,.04) 1px,transparent 1px);background-size:50px 50px}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(12px,-14px) scale(1.04)}66%{transform:translate(-10px,12px) scale(.97)}}
+.hero-content{position:relative;max-width:1180px;margin:0 auto;width:100%}
+.hero-flags{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem}
+.flag-badge{display:inline-flex;align-items:center;gap:.45rem;background:#fff;border:1.5px solid rgba(26,43,94,.12);padding:.42rem 1.1rem;border-radius:100px;font-size:.82rem;font-weight:700;color:var(--navy);box-shadow:var(--sh)}
+.flag-badge .flag{font-size:1.3rem}
+.flag-plus{font-size:1.3rem;font-weight:800;color:var(--green)}
+.flag-label{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);padding:.35rem .95rem;border-radius:100px;font-size:.74rem;font-weight:700;letter-spacing:.04em}
+#hero h1{max-width:14ch;margin-bottom:1.5rem}
+.hero-sub{max-width:56ch;font-size:1.08rem;color:var(--text);margin-bottom:2.5rem;line-height:1.9}
+.hero-sub strong{color:var(--navy);font-weight:700}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:4rem}
+.hero-stats{display:inline-flex;align-items:center;gap:2.5rem;flex-wrap:wrap;background:#fff;padding:1.5rem 2.5rem;border-radius:var(--radius);box-shadow:var(--sh-lg);border:1.5px solid rgba(26,43,94,.06)}
+.stat span{display:block;font-family:'Playfair Display',serif;font-size:2.3rem;font-weight:800;color:var(--navy);line-height:1}
+.stat small{font-size:.73rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;display:block;margin-top:.2rem}
+.div-v{width:1px;height:46px;background:var(--light)}
+#recognition{padding:0}
+.recog-inner{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 55%,var(--green) 100%);padding:3rem 2rem}
+.recog-title{text-align:center;margin-bottom:2rem}
+.recog-label{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:var(--gold2);padding:.4rem 1.2rem;border-radius:100px;font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.recog-cards{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:center;flex-wrap:wrap}
+.recog-card{flex:1;min-width:240px;display:flex;align-items:center;gap:1rem;padding:1.5rem 2rem;color:#fff}
+.recog-flag{font-size:2.8rem;flex-shrink:0}
+.recog-card strong{display:block;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:.25rem}
+.recog-card p{font-size:.82rem;color:rgba(255,255,255,.7);line-height:1.5}
+.recog-div{width:1px;height:60px;background:rgba(255,255,255,.15);flex-shrink:0}
+.sec-hdr{text-align:center;max-width:640px;margin:0 auto 4rem}
+.sec-hdr h2{margin-bottom:.75rem}
+.sec-hdr p{color:var(--muted);font-size:1rem}
+#about{padding:7rem 0}
+.about-intro{display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;margin-bottom:5rem}
+.about-text h2{margin-bottom:1rem}
+.about-text p{color:var(--text);margin-bottom:1rem;font-size:1rem}
+.about-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem}
+.about-img-wrap{position:relative;flex-shrink:0}
+.about-logo{width:260px;height:260px;object-fit:contain;background:#fff;border-radius:20px;padding:1.5rem;box-shadow:var(--sh-lg);border:2px solid var(--light)}
+.about-badge{position:absolute;bottom:-16px;right:-16px;background:var(--gold);border-radius:12px;padding:.75rem 1rem;display:flex;align-items:center;gap:.5rem;box-shadow:0 8px 28px rgba(232,160,32,.38)}
+.badge-icon{font-size:1.5rem}
+.about-badge strong{display:block;font-size:.9rem;color:var(--navy);font-weight:700}
+.about-badge small{font-size:.72rem;color:var(--navy2)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}
+.svc-card{background:#fff;border:1.5px solid var(--light);border-radius:var(--radius);padding:2rem;transition:border-color var(--tr),transform var(--tr),box-shadow var(--tr)}
+.svc-card:hover{border-color:var(--green3);transform:translateY(-5px);box-shadow:var(--sh-lg)}
+.svc-icon{width:54px;height:54px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.55rem;margin-bottom:1.25rem}
+.ic-g{background:rgba(46,125,50,.1)}.ic-n{background:rgba(26,43,94,.1)}.ic-go{background:rgba(232,160,32,.12)}
+.svc-card h3{margin-bottom:.6rem;font-size:1.2rem}
+.svc-card p{font-size:.9rem;color:var(--muted);margin-bottom:1.2rem}
+.svc-card ul{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.svc-card ul li{font-size:.86rem;color:var(--text);padding-left:1.4rem;position:relative}
+.svc-card ul li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700}
+#tips{padding:7rem 0;background:linear-gradient(180deg,var(--light) 0%,#fff 100%)}
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.tip-card{background:#fff;border:1.5px solid var(--light);border-radius:var(--radius);padding:2rem;position:relative;overflow:hidden;transition:all var(--tr)}
+.tip-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--navy),var(--green));transform:scaleX(0);transition:transform var(--tr);transform-origin:left}
+.tip-card:hover{transform:translateY(-5px);box-shadow:var(--sh-lg);border-color:rgba(46,125,50,.3)}
+.tip-card:hover::after{transform:scaleX(1)}
+.tip-num{font-family:'Playfair Display',serif;font-size:3.2rem;font-weight:800;color:rgba(26,43,94,.06);line-height:1;position:absolute;top:.8rem;right:1.4rem}
+.tip-icon{font-size:2rem;margin-bottom:.7rem}
+.tip-card h4{color:var(--navy);margin-bottom:.7rem}
+.tip-card p{font-size:.9rem;color:var(--muted);line-height:1.85}
+#results{padding:7rem 0}
+.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-bottom:3rem}
+.res-card{background:#fff;border:1.5px solid var(--light);border-radius:var(--radius);padding:2rem;transition:all var(--tr);position:relative;overflow:hidden}
+.res-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--navy),var(--green))}
+.res-card:hover{transform:translateY(-5px);box-shadow:var(--sh-lg)}
+.res-flag{font-size:2rem;margin-bottom:.75rem}
+.res-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:.2rem}
+.res-detail{font-size:.77rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:1.5rem}
+.score-row{display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem}
+.score{flex:1;text-align:center;padding:.75rem;border-radius:9px}
+.score .lbl{display:block;font-size:.67rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem}
+.score.before{background:var(--light)}
+.score.before .lbl{color:var(--muted)}
+.score.before .val{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--muted)}
+.score.after{background:linear-gradient(135deg,rgba(26,43,94,.07),rgba(46,125,50,.09));border:1.5px solid rgba(46,125,50,.25)}
+.score.after .lbl{color:var(--green)}
+.score.after .val{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--green)}
+.arrow{font-size:1.5rem;color:var(--navy);font-weight:700}
+.res-tag{font-size:.83rem;color:var(--success);font-weight:600}
+.results-cta{text-align:center;padding:3rem;background:linear-gradient(135deg,rgba(26,43,94,.04),rgba(46,125,50,.04));border:1.5px solid rgba(46,125,50,.2);border-radius:var(--radius)}
+.results-cta p{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);margin-bottom:1.5rem}
+#testimonials{padding:7rem 0;background:linear-gradient(180deg,var(--light) 0%,#fff 100%)}
+.testi-slider{overflow:hidden;position:relative}
+.testi-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1);gap:1.5rem}
+.testi-card{flex:0 0 calc(33.333% - 1rem);background:#fff;border:1.5px solid var(--light);border-radius:var(--radius);padding:2.5rem;box-shadow:var(--sh);transition:all var(--tr)}
+.testi-card:hover{border-color:rgba(46,125,50,.3);box-shadow:var(--sh-lg);transform:translateY(-4px)}
+.stars{color:var(--gold);font-size:1rem;letter-spacing:2px;margin-bottom:1.25rem}
+blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.82;color:var(--navy);margin-bottom:1.5rem;font-style:italic}
+.t-author{display:flex;align-items:center;gap:.9rem}
+.avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--green));color:#fff;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0}
+.t-author strong{display:block;color:var(--navy);font-size:.95rem}
+.t-author small{color:var(--muted);font-size:.79rem}
+.testi-ctrl{display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-top:2.5rem}
+.t-btn{width:46px;height:46px;border-radius:50%;background:#fff;border:1.5px solid var(--light);color:var(--navy);font-size:1.1rem;cursor:pointer;transition:var(--tr);display:flex;align-items:center;justify-content:center;box-shadow:var(--sh)}
+.t-btn:hover{background:var(--navy);border-color:var(--navy);color:#fff}
+.t-dots{display:flex;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--light);border:1.5px solid rgba(26,43,94,.15);cursor:pointer;transition:var(--tr)}
+.dot.active{background:var(--navy);border-color:var(--navy);width:24px;border-radius:100px}
+#footer{background:var(--navy3);padding:5rem 0 2rem}
+.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-logo{height:68px;width:auto;object-fit:contain;background:#fff;border-radius:12px;padding:.5rem 1rem;margin-bottom:1.25rem}
+.fb p{font-size:.87rem;color:rgba(255,255,255,.5);margin-bottom:1.25rem;max-width:28ch}
+.footer-flags{display:flex;gap:.5rem;font-size:1.55rem;margin-bottom:1.25rem}
+.socials{display:flex;gap:.75rem;align-items:center}
+.soc-wa{display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--wa);border-radius:50%;color:#fff!important;transition:var(--tr)}
+.soc-wa:hover{transform:scale(1.12);box-shadow:0 5px 18px rgba(37,211,102,.42)}
+.socials a:not(.soc-wa){font-size:1.35rem;opacity:.55;transition:opacity var(--tr)}
+.socials a:not(.soc-wa):hover{opacity:1}
+.fl h5{font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold2);margin-bottom:1.25rem}
+.fl ul{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.fl ul li a,.fl ul li span{font-size:.87rem;color:rgba(255,255,255,.5);transition:color var(--tr)}
+.fl ul li a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:2rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.footer-bottom p{font-size:.79rem;color:rgba(255,255,255,.32)}
+.floating-wa{position:fixed;bottom:2rem;right:2rem;width:62px;height:62px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;z-index:900;box-shadow:0 8px 28px rgba(37,211,102,.48);opacity:0;transform:scale(.8);transition:var(--tr);pointer-events:none}
+.floating-wa.visible{opacity:1;transform:scale(1);pointer-events:all}
+.floating-wa:hover{transform:scale(1.1);box-shadow:0 14px 38px rgba(37,211,102,.56)}
+.wa-tip{position:absolute;right:72px;background:var(--navy);color:#fff;padding:.42rem 1rem;border-radius:8px;font-size:.79rem;font-weight:600;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity var(--tr)}
+.floating-wa:hover .wa-tip{opacity:1}
+.wa-tip::after{content:'';position:absolute;left:100%;top:50%;transform:translateY(-50%);border:5px solid transparent;border-left-color:var(--navy)}
+.wa-svg{fill:currentColor}
+@media(max-width:960px){
+  .about-intro{grid-template-columns:1fr}
+  .about-img-wrap{display:flex;justify-content:center}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .testi-card{flex:0 0 calc(50% - .75rem)}
+}
+@media(max-width:768px){
+  .announce-bar{font-size:.77rem;gap:.75rem}
+  #navbar{top:48px}
+  #navbar.scrolled{top:0}
+  .nav-links{position:fixed;top:0;right:-100%;width:290px;height:100vh;background:#fff;flex-direction:column;justify-content:center;gap:2rem;padding:2rem;transition:right var(--tr);box-shadow:-4px 0 28px rgba(0,0,0,.12);z-index:999}
+  .nav-links.open{right:0}
+  .nav-links a{font-size:1.1rem}
+  .burger{display:flex}
+  .hero-stats{flex-direction:column;gap:1rem;align-items:flex-start;padding:1.5rem}
+  .div-v{display:none}
+  .services-grid,.tips-grid,.results-grid{grid-template-columns:1fr}
+  .testi-card{flex:0 0 100%}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column}
+  .recog-cards{flex-direction:column}
+  .recog-div{width:80%;height:1px;margin:0 auto}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:480px){
+  h1{font-size:2.4rem}h2{font-size:1.9rem}
+  .hero-flags{gap:.5rem}
+}
+</style>
 </head>
 <body>
 
-  <!-- ── ANNOUNCEMENT BAR ── -->
-  <div class="announce-bar">
-    <span>🎉 CELPIP is now accepted for <strong>Canada PR</strong> and <strong>Australia PR</strong> — Start Your Journey Today!</span>
-    <a href="#booking" class="announce-cta">Book Free Session →</a>
+<div class="announce-bar">
+  <span>🎉 CELPIP is now accepted for <strong>Canada PR</strong> and <strong>Australia PR</strong> — Start Your Journey Today!</span>
+  <a href="#booking" class="announce-cta">Book Free Session →</a>
+</div>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero"><img src="logo.jpeg" alt="Tovian Educational Consult" class="nav-logo" /></a>
+    <button class="burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#recognition">Recognition</a></li>
+      <li><a href="#tips">Tips</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#booking" class="nav-cta">Book a Session</a></li>
+    </ul>
   </div>
+</nav>
 
-  <!-- ── NAV ── -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a href="#hero" class="logo-link">
-        <img src="logo.jpeg" alt="Tovian Educational Consult" class="nav-logo" />
+<section id="hero">
+  <div class="hero-bg">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-flags reveal">
+      <div class="flag-badge"><span class="flag">🇨🇦</span><span>Canada PR</span></div>
+      <div class="flag-plus">+</div>
+      <div class="flag-badge"><span class="flag">🇦🇺</span><span>Australia PR</span></div>
+      <div class="flag-label">CELPIP Accepted For Both</div>
+    </div>
+    <h1 class="reveal d1">Your Trusted<br /><em>CELPIP Coaching</em><br />Partner</h1>
+    <p class="hero-sub reveal d2">Tovian Educational Consult has helped <strong>50+ students</strong> achieve their target CLB scores for Canada PR, Australia PR, citizenship, and professional licensing — with <strong>5+ years</strong> of proven expertise.</p>
+    <div class="hero-actions reveal d3">
+      <a href="#booking" class="btn btn-primary">📅 Book Free Consultation</a>
+      <a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank" rel="noopener" class="btn btn-wa">
+        <svg width="20" height="20" viewBox="0 0 24 24" class="wa-svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
       </a>
-      <button class="burger" id="burger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#recognition">Recognition</a></li>
-        <li><a href="#tips">Tips</a></li>
-        <li><a href="#results">Results</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#booking" class="nav-cta">Book a Session</a></li>
-      </ul>
     </div>
-  </nav>
+    <div class="hero-stats reveal d4">
+      <div class="stat"><span id="cntStudents">50+</span><small>Students Coached</small></div>
+      <div class="div-v"></div>
+      <div class="stat"><span id="cntPass">96%</span><small>Pass Rate</small></div>
+      <div class="div-v"></div>
+      <div class="stat"><span id="cntYears">5+</span><small>Years Experience</small></div>
+      <div class="div-v"></div>
+      <div class="stat"><span>CLB 9–12</span><small>Average Outcome</small></div>
+    </div>
+  </div>
+</section>
 
-  <!-- ── HERO ── -->
-  <section id="hero">
-    <div class="hero-bg">
-      <div class="hero-orb orb1"></div>
-      <div class="hero-orb orb2"></div>
-      <div class="hero-orb orb3"></div>
-      <div class="hero-grid"></div>
+<section id="recognition">
+  <div class="recog-inner">
+    <div class="recog-title"><span class="recog-label">CELPIP Officially Accepted By</span></div>
+    <div class="recog-cards">
+      <div class="recog-card"><span class="recog-flag">🇨🇦</span><div><strong>Canada Permanent Residency</strong><p>Express Entry, PNP, Family Sponsorship &amp; Citizenship</p></div></div>
+      <div class="recog-div"></div>
+      <div class="recog-card"><span class="recog-flag">🇦🇺</span><div><strong>Australia Permanent Residency</strong><p>Skilled Migration, State Nomination &amp; Citizenship</p></div></div>
+      <div class="recog-div"></div>
+      <div class="recog-card"><span class="recog-flag">🏥</span><div><strong>Professional Licensing</strong><p>Nursing, Engineering, Medicine &amp; More</p></div></div>
     </div>
-    <div class="hero-content">
-      <div class="hero-flags reveal">
-        <div class="flag-badge">
-          <span class="flag">🇨🇦</span>
-          <span>Canada PR</span>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-intro reveal">
+      <div class="about-text">
+        <span class="tag">Why Tovian?</span>
+        <h2>5+ Years Turning <em>Test Anxiety</em> Into Target Scores</h2>
+        <p>At Tovian Educational Consult, we don't just teach CELPIP — we build confidence. Every coaching programme is tailored to your specific score gap, exam date, and immigration goal.</p>
+        <p>Sessions run via <strong>Zoom or Microsoft Teams</strong> — available to students across Nigeria, Canada, Australia, the UK, and beyond.</p>
+        <div class="about-actions">
+          <a href="#booking" class="btn btn-primary">Start Free Consultation</a>
+          <a href="tel:+2348104053137" class="btn btn-outline">📞 Call Us Now</a>
         </div>
-        <div class="flag-plus">+</div>
-        <div class="flag-badge">
-          <span class="flag">🇦🇺</span>
-          <span>Australia PR</span>
-        </div>
-        <div class="flag-label">CELPIP Accepted For Both</div>
       </div>
-      <h1 class="reveal delay-1">
-        Your Trusted<br /><em>CELPIP Coaching</em><br />Partner
-      </h1>
-      <p class="hero-sub reveal delay-2">
-        Tovian Educational Consult has helped <strong>50+ students</strong> achieve
-        their target CLB scores for Canada PR, Australia PR, citizenship, and professional licensing —
-        with <strong>5+ years</strong> of proven expertise.
-      </p>
-      <div class="hero-actions reveal delay-3">
-        <a href="#booking" class="btn btn-primary">📅 Book Free Consultation</a>
-        <a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank" rel="noopener" class="btn btn-whatsapp">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Chat on WhatsApp
+      <div class="about-img-wrap">
+        <img src="logo.jpeg" alt="Tovian Educational Consult" class="about-logo" />
+        <div class="about-badge"><div class="badge-icon">🏆</div><div><strong>Top Rated</strong><small>CELPIP Coach</small></div></div>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal"><div class="svc-icon ic-g">🎧</div><h3>Listening Mastery</h3><p>Targeted exercises that train you to catch every detail — from daily conversations to complex news items.</p><ul><li>Mock test simulations</li><li>Speed &amp; comprehension drills</li><li>Accent familiarisation</li></ul></div>
+      <div class="svc-card reveal d1"><div class="svc-icon ic-n">📖</div><h3>Reading Strategies</h3><p>Navigate dense passages and answer all 38 questions accurately within the strict time limit.</p><ul><li>Skimming &amp; scanning techniques</li><li>Vocabulary building</li><li>Inference &amp; analysis skills</li></ul></div>
+      <div class="svc-card reveal d2"><div class="svc-icon ic-go">✍️</div><h3>Writing Excellence</h3><p>Master the email task and survey response with proven frameworks that score top marks every time.</p><ul><li>Email writing templates</li><li>Task 2 survey frameworks</li><li>Personalised written feedback</li></ul></div>
+      <div class="svc-card reveal d3"><div class="svc-icon ic-g">🎙️</div><h3>Speaking Confidence</h3><p>Eliminate filler words, improve fluency, and nail all 8 speaking tasks with structured responses.</p><ul><li>Live mock interviews</li><li>Task-specific frameworks</li><li>Pronunciation coaching</li></ul></div>
+      <div class="svc-card reveal d1"><div class="svc-icon ic-n">📅</div><h3>1-on-1 Sessions</h3><p>Private coaching on Zoom or Teams, tailored to your weakest areas and scheduled around your life.</p><ul><li>Flexible evenings &amp; weekends</li><li>Progress tracking</li><li>Custom study plan included</li></ul></div>
+      <div class="svc-card reveal d2"><div class="svc-icon ic-go">📦</div><h3>Full Prep Package</h3><p>Our all-inclusive 2-week bundle covers all four components with unlimited materials and a score guarantee.</p><ul><li>All 4 skill areas covered</li><li>Score improvement guarantee</li><li>Lifetime resource access</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="tips">
+  <div class="container">
+    <div class="sec-hdr reveal">
+      <span class="tag tag-g">Expert Tips</span>
+      <h2>Insider <em>CELPIP Strategies</em> From Our Coaches</h2>
+      <p>The exact techniques our top-scoring students use on exam day.</p>
+    </div>
+    <div class="tips-grid">
+      <div class="tip-card reveal"><div class="tip-num">01</div><div class="tip-icon">⏱️</div><h4>Manage Your Time by Task</h4><p>CELPIP is strictly timed. Practise switching tasks at exactly the right moment — even if you haven't finished. Unanswered questions score zero; attempted ones might score 1–5.</p></div>
+      <div class="tip-card reveal d1"><div class="tip-num">02</div><div class="tip-icon">📋</div><h4>Study the Scoring Descriptors</h4><p>Download the official scoring descriptors and learn what separates a 9 from a 10. Examiners follow these exactly — so should you in every practice session.</p></div>
+      <div class="tip-card reveal d2"><div class="tip-num">03</div><div class="tip-icon">🎙️</div><h4>Speak for the Full Time — Always</h4><p>Silence is penalised. If you finish speaking early, expand with examples, alternatives, or caveats. A fluent monologue that fills the time always scores higher.</p></div>
+      <div class="tip-card reveal"><div class="tip-num">04</div><div class="tip-icon">✉️</div><h4>Email Task: Address All 3 Points</h4><p>The email task gives 3 bullet points. Students who address all 3 thoroughly, in distinct paragraphs, consistently score 2–3 bands higher than those who skip one.</p></div>
+      <div class="tip-card reveal d1"><div class="tip-num">05</div><div class="tip-icon">📝</div><h4>Listening: Note Keywords, Not Sentences</h4><p>Write keywords and numbers only — never full sentences. Your brain processes better when you listen actively and note only essentials.</p></div>
+      <div class="tip-card reveal d2"><div class="tip-num">06</div><div class="tip-icon">📚</div><h4>Reading: Answers Follow Passage Order</h4><p>CELPIP reading answers almost always follow the order of the passage. If stuck on Q14, the answer is between where Q13 and Q15 were found.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="container">
+    <div class="sec-hdr reveal">
+      <span class="tag">Student Results</span>
+      <h2>Real Students. <em>Real Scores.</em> Real Lives Changed.</h2>
+      <p>Score transformations our coached students have achieved in just 2 weeks.</p>
+    </div>
+    <div class="results-grid">
+      <div class="res-card reveal"><div class="res-flag">🇨🇦</div><div class="res-name">Toba A.</div><div class="res-detail">Canada Immigration (PR)</div><div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 5</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 9</span></div></div><div class="res-tag">✅ PR Application Approved</div></div>
+      <div class="res-card reveal d1"><div class="res-flag">🇦🇺</div><div class="res-name">Helen E.</div><div class="res-detail">Australia Skilled Migration</div><div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 6</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 10</span></div></div><div class="res-tag">✅ Australia PR Granted</div></div>
+      <div class="res-card reveal d2"><div class="res-flag">🏥</div><div class="res-name">Blessing O.</div><div class="res-detail">Nursing Licensing (Canada)</div><div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 4</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 10</span></div></div><div class="res-tag">✅ NCLEX Registered</div></div>
+      <div class="res-card reveal d1"><div class="res-flag">🇨🇦</div><div class="res-name">James W.</div><div class="res-detail">Express Entry — Max Points</div><div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 7</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 12</span></div></div><div class="res-tag">✅ Max CRS Points Achieved</div></div>
+      <div class="res-card reveal d2"><div class="res-flag">🇦🇺</div><div class="res-name">Funmi B.</div><div class="res-detail">Australia State Nomination</div><div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 6</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 9</span></div></div><div class="res-tag">✅ State Nomination Secured</div></div>
+      <div class="res-card reveal d3"><div class="res-flag">🇨🇦</div><div class="res-name">Chidi N.</div><div class="res-detail">Canadian Citizenship</div><div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 5</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 8</span></div></div><div class="res-tag">✅ Canadian Citizen 🎉</div></div>
+    </div>
+    <div class="results-cta reveal">
+      <p>Join 50+ students who have transformed their scores with Tovian in just 2 weeks.</p>
+      <a href="#booking" class="btn btn-primary">Start Your Transformation Today</a>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="container">
+    <div class="sec-hdr reveal">
+      <span class="tag tag-g">Testimonials</span>
+      <h2>What Our <em>Students Say</em></h2>
+      <p>Hear directly from those whose lives changed after coaching with Tovian.</p>
+    </div>
+    <div class="testi-slider">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card"><div class="stars">★★★★★</div><blockquote>"E be like say Tovian dey use juju! In just 2 weeks of personalised coaching, my writing and speaking score jumped from CLB 5 to CLB 9. My Canada PR don approve and I dey relocate this year. Thank you ma!"</blockquote><div class="t-author"><div class="avatar">TA</div><div><strong>Toba A.</strong><small>🇳🇬🇨🇦 CLB 5 → 9 | Canada PR · 2-Week Coaching</small></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><blockquote>"I was sceptical at first but Tovian Educational Consult exceeded every expectation. In 2 weeks of intensive coaching via Teams, my CLB score jumped from 6 to 10. I dey recommend them for everybody!"</blockquote><div class="t-author"><div class="avatar">HE</div><div><strong>Helen E.</strong><small>🇳🇬🇦🇺 CLB 6 → 10 | Australia PR · 2-Week Coaching</small></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><blockquote>"I needed CLB 10 for nursing licensing. In 2 weeks of personalised sessions, my coach identified exactly where I was losing marks. I hit CLB 10 on my first attempt — God bless Tovian!"</blockquote><div class="t-author"><div class="avatar">BO</div><div><strong>Blessing O.</strong><small>🇳🇬🏥 CLB 4 → 10 | Nursing License · 2-Week Coaching</small></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><blockquote>"Very professional, very structured. I got a personalised study plan and feedback after every mock session. 2 weeks of focused coaching — worth every kobo. My Canada PR is approved!"</blockquote><div class="t-author"><div class="avatar">JW</div><div><strong>James W.</strong><small>🇨🇦 CLB 7 → 12 | Max CRS Points · 2-Week Coaching</small></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><blockquote>"After 2 weeks of personalised coaching on Zoom, the CELPIP speaking section felt easy. My coach was patient, encouraging, and so knowledgeable. CLB 9 secured and Australia visa approved!"</blockquote><div class="t-author"><div class="avatar">FB</div><div><strong>Funmi B.</strong><small>🇳🇬🇦🇺 CLB 6 → 9 | Australia Nominated · 2-Week Coaching</small></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><blockquote>"I failed twice before finding Tovian. Just 2 weeks of personalised coaching changed everything. The reading and listening tips alone were game-changing. CLB 8 achieved — I am now a Canadian citizen!"</blockquote><div class="t-author"><div class="avatar">CN</div><div><strong>Chidi N.</strong><small>🇳🇬🇨🇦 CLB 5 → 8 | Canadian Citizen · 2-Week Coaching</small></div></div></div>
+      </div>
+      <div class="testi-ctrl">
+        <button class="t-btn" id="prevBtn">&#8592;</button>
+        <div class="t-dots" id="testiDots"></div>
+        <button class="t-btn" id="nextBtn">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="booking" style="padding:7rem 0;background:linear-gradient(155deg,#EEF3FF 0%,#E6F4E8 45%,#FFF8EC 100%);position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(26,43,94,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(26,43,94,.04) 1px,transparent 1px);background-size:50px 50px;pointer-events:none"></div>
+  <div class="container" style="position:relative">
+    <div class="sec-hdr reveal" style="margin-bottom:3rem">
+      <span class="tag">Book a Session</span>
+      <h2>Ready to Hit <em>Your Target Score?</em></h2>
+      <p>Join 50+ students who have already transformed their CELPIP scores. Book your free 30-minute consultation — no payment required.</p>
+    </div>
+    <div class="reveal" style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-bottom:3.5rem">
+      <div style="display:flex;align-items:center;gap:.6rem;background:#fff;border:1.5px solid rgba(26,43,94,.1);border-radius:100px;padding:.5rem 1.2rem;font-size:.88rem;font-weight:600;color:var(--navy);box-shadow:var(--sh)"><span style="color:var(--green);font-weight:800">✓</span> Free 30-min consultation</div>
+      <div style="display:flex;align-items:center;gap:.6rem;background:#fff;border:1.5px solid rgba(26,43,94,.1);border-radius:100px;padding:.5rem 1.2rem;font-size:.88rem;font-weight:600;color:var(--navy);box-shadow:var(--sh)"><span style="color:var(--green);font-weight:800">✓</span> Personalised score gap analysis</div>
+      <div style="display:flex;align-items:center;gap:.6rem;background:#fff;border:1.5px solid rgba(26,43,94,.1);border-radius:100px;padding:.5rem 1.2rem;font-size:.88rem;font-weight:600;color:var(--navy);box-shadow:var(--sh)"><span style="color:var(--green);font-weight:800">✓</span> No payment to get started</div>
+      <div style="display:flex;align-items:center;gap:.6rem;background:#fff;border:1.5px solid rgba(26,43,94,.1);border-radius:100px;padding:.5rem 1.2rem;font-size:.88rem;font-weight:600;color:var(--navy);box-shadow:var(--sh)"><span style="color:var(--green);font-weight:800">✓</span> Zoom or Microsoft Teams</div>
+      <div style="display:flex;align-items:center;gap:.6rem;background:#fff;border:1.5px solid rgba(26,43,94,.1);border-radius:100px;padding:.5rem 1.2rem;font-size:.88rem;font-weight:600;color:var(--navy);box-shadow:var(--sh)"><span style="color:var(--green);font-weight:800">✓</span> Available worldwide</div>
+    </div>
+    <div class="reveal" style="max-width:680px;margin:0 auto;background:#fff;border-radius:24px;padding:3.5rem 3rem;box-shadow:var(--sh-lg);border:1.5px solid rgba(26,43,94,.07);text-align:center;">
+      <div style="font-size:3.5rem;margin-bottom:1rem;">📅</div>
+      <h3 style="font-size:1.9rem;color:var(--navy);margin-bottom:.75rem;">Book Your Free Session</h3>
+      <p style="color:var(--muted);font-size:1rem;margin-bottom:2rem;max-width:44ch;margin-left:auto;margin-right:auto;">Takes less than 2 minutes to fill. We'll reach out within 24 hours to confirm your slot.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScKgVTj3tcXmrQ7EA3gn5xW-7ThafWpyUhQ2LAX1VUgSIvOlQ/viewform" target="_blank" rel="noopener"
+        style="display:inline-flex;align-items:center;justify-content:center;gap:.6rem;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:1.1rem 2.8rem;border-radius:100px;font-size:1.05rem;font-weight:700;text-decoration:none;box-shadow:0 8px 28px rgba(26,43,94,.28);margin-bottom:1.5rem;">
+        📋 Fill Booking Form — It's Free
+      </a>
+      <div style="display:flex;align-items:center;gap:1rem;margin:1.5rem 0;color:var(--muted);font-size:.85rem;font-weight:600;">
+        <div style="flex:1;height:1px;background:var(--light)"></div>
+        OR REACH US DIRECTLY
+        <div style="flex:1;height:1px;background:var(--light)"></div>
+      </div>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;background:var(--wa);color:#fff;padding:.8rem 1.6rem;border-radius:100px;font-size:.92rem;font-weight:700;text-decoration:none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+        <a href="tel:+2348104053137" style="display:inline-flex;align-items:center;gap:.5rem;background:var(--light);color:var(--navy);padding:.8rem 1.6rem;border-radius:100px;font-size:.92rem;font-weight:700;text-decoration:none;border:1.5px solid rgba(26,43,94,.12);">
+          📞 Call Us Now
         </a>
       </div>
-      <div class="hero-stats reveal delay-4">
-        <div class="stat">
-          <span>50+</span>
-          <small>Students Coached</small>
-        </div>
-        <div class="divider-v"></div>
-        <div class="stat">
-          <span>96%</span>
-          <small>Pass Rate</small>
-        </div>
-        <div class="divider-v"></div>
-        <div class="stat">
-          <span>5+</span>
-          <small>Years Experience</small>
-        </div>
-        <div class="divider-v"></div>
-        <div class="stat">
-          <span>CLB 9–12</span>
-          <small>Average Outcome</small>
-        </div>
-      </div>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:1.5rem;">We respond within 24 hours · Sessions via Zoom or Teams · Available Mon–Fri 9am–10pm WAT</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ── RECOGNITION BANNER ── -->
-  <section id="recognition">
-    <div class="recog-inner">
-      <div class="recog-title">
-        <span class="recog-label">CELPIP Officially Accepted By</span>
-      </div>
-      <div class="recog-cards">
-        <div class="recog-card">
-          <span class="recog-flag">🇨🇦</span>
-          <div>
-            <strong>Canada Permanent Residency</strong>
-            <p>Express Entry, PNP, Family Sponsorship & Citizenship</p>
-          </div>
-        </div>
-        <div class="recog-divider"></div>
-        <div class="recog-card">
-          <span class="recog-flag">🇦🇺</span>
-          <div>
-            <strong>Australia Permanent Residency</strong>
-            <p>Skilled Migration, State Nomination & Citizenship</p>
-          </div>
-        </div>
-        <div class="recog-divider"></div>
-        <div class="recog-card">
-          <span class="recog-flag">🏥</span>
-          <div>
-            <strong>Professional Licensing</strong>
-            <p>Nursing, Engineering, Medicine & More</p>
-          </div>
+<footer id="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="fb">
+        <img src="logo.jpeg" alt="Tovian Educational Consult" class="footer-logo" />
+        <p>Nigeria's trusted CELPIP coaching service — helping students achieve their target score for Canada PR, Australia PR, and professional licensing.</p>
+        <div class="footer-flags">🇨🇦🇦🇺🇳🇬🇬🇧</div>
+        <div class="socials">
+          <a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank" rel="noopener" class="soc-wa">
+            <svg width="20" height="20" viewBox="0 0 24 24" class="wa-svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="mailto:lolaoluwatoyin@gmail.com">📧</a>
+          <a href="tel:+2348104053137">📞</a>
         </div>
       </div>
+      <div class="fl"><h5>Services</h5><ul><li><a href="#about">Listening Coaching</a></li><li><a href="#about">Reading Coaching</a></li><li><a href="#about">Writing Coaching</a></li><li><a href="#about">Speaking Coaching</a></li><li><a href="#about">Full Prep Package</a></li></ul></div>
+      <div class="fl"><h5>CELPIP For</h5><ul><li><a href="#recognition">🇨🇦 Canada PR</a></li><li><a href="#recognition">🇦🇺 Australia PR</a></li><li><a href="#recognition">Canadian Citizenship</a></li><li><a href="#recognition">Nursing Licensing</a></li><li><a href="#recognition">Engineering (PEng)</a></li></ul></div>
+      <div class="fl"><h5>Contact Us</h5><ul><li><a href="mailto:lolaoluwatoyin@gmail.com">lolaoluwatoyin@gmail.com</a></li><li><a href="tel:+2348104053137">+234 810 405 3137</a></li><li><a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank">WhatsApp Us</a></li><li><span>Mon–Fri, 9am–10pm WAT</span></li><li><span>Sessions via Zoom or Teams</span></li></ul></div>
     </div>
-  </section>
-
-  <!-- ── ABOUT / SERVICES ── -->
-  <section id="about">
-    <div class="container">
-      <div class="about-intro reveal">
-        <div class="about-text">
-          <span class="tag">Why Tovian?</span>
-          <h2>5+ Years of Turning <em>Test Anxiety</em> Into Target Scores</h2>
-          <p>At Tovian Educational Consult, we don't just teach CELPIP — we build confidence. Every coaching program is tailored to your specific score gap, exam date, and immigration goal. Whether you need CLB 7 for PR or CLB 10 for professional licensing, we have a proven path for you.</p>
-          <p>Sessions run via <strong>Zoom or Microsoft Teams</strong> — available to students across Nigeria, Canada, Australia, the UK, and beyond.</p>
-          <div class="about-actions">
-            <a href="#booking" class="btn btn-primary">Start Free Consultation</a>
-            <a href="tel:+2348104053137" class="btn btn-outline">📞 Call Us Now</a>
-          </div>
-        </div>
-        <div class="about-image-wrap">
-          <img src="logo.jpeg" alt="Tovian Educational Consult" class="about-logo" />
-          <div class="about-badge">
-            <div class="badge-icon">🏆</div>
-            <div>
-              <strong>Top Rated</strong>
-              <small>CELPIP Coach</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card reveal">
-          <div class="service-icon-wrap green">🎧</div>
-          <h3>Listening Mastery</h3>
-          <p>Targeted exercises that train you to catch every detail — from daily conversations to complex news items.</p>
-          <ul>
-            <li>Mock test simulations</li>
-            <li>Speed & comprehension drills</li>
-            <li>Accent familiarisation</li>
-          </ul>
-        </div>
-        <div class="service-card reveal delay-1">
-          <div class="service-icon-wrap navy">📖</div>
-          <h3>Reading Strategies</h3>
-          <p>Navigate dense passages and answer all 38 questions accurately within the strict time limit.</p>
-          <ul>
-            <li>Skimming & scanning techniques</li>
-            <li>Vocabulary building</li>
-            <li>Inference & analysis skills</li>
-          </ul>
-        </div>
-        <div class="service-card reveal delay-2">
-          <div class="service-icon-wrap gold">✍️</div>
-          <h3>Writing Excellence</h3>
-          <p>Master the email task and survey response with proven frameworks that score top marks every time.</p>
-          <ul>
-            <li>Email writing templates</li>
-            <li>Task 2 survey frameworks</li>
-            <li>Personalised written feedback</li>
-          </ul>
-        </div>
-        <div class="service-card reveal delay-3">
-          <div class="service-icon-wrap green">🎙️</div>
-          <h3>Speaking Confidence</h3>
-          <p>Eliminate filler words, improve fluency, and nail all 8 speaking tasks with structured responses.</p>
-          <ul>
-            <li>Live mock interviews</li>
-            <li>Task-specific frameworks</li>
-            <li>Pronunciation coaching</li>
-          </ul>
-        </div>
-        <div class="service-card reveal delay-1">
-          <div class="service-icon-wrap navy">📅</div>
-          <h3>1-on-1 Sessions</h3>
-          <p>Private coaching on Zoom or Teams, tailored to your weakest areas and scheduled around your life.</p>
-          <ul>
-            <li>Flexible evenings & weekends</li>
-            <li>Progress tracking dashboard</li>
-            <li>Custom study plan included</li>
-          </ul>
-        </div>
-        <div class="service-card reveal delay-2">
-          <div class="service-icon-wrap gold">📦</div>
-          <h3>Full Prep Package</h3>
-          <p>Our all-inclusive bundle covers all four components — with unlimited practice materials and a score guarantee.</p>
-          <ul>
-            <li>All 4 skill areas covered</li>
-            <li>Score improvement guarantee</li>
-            <li>Lifetime resource access</li>
-          </ul>
-        </div>
-      </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Tovian Educational Consult. All rights reserved.</p>
+      <p>Not affiliated with Paragon Testing Enterprises or UBC.</p>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- ── TIPS ── -->
-  <section id="tips">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="tag tag-green">Expert Tips</span>
-        <h2>Insider <em>CELPIP Strategies</em> From Our Coaches</h2>
-        <p>These are the exact techniques our top-scoring students use on exam day.</p>
-      </div>
-      <div class="tips-grid">
-        <div class="tip-card reveal">
-          <div class="tip-num">01</div>
-          <div class="tip-icon">⏱️</div>
-          <h4>Manage Your Time by Task</h4>
-          <p>CELPIP is strictly timed. Practise switching tasks at exactly the right moment — even if you haven't finished. Unanswered questions score zero; attempted ones might score 1–5.</p>
-        </div>
-        <div class="tip-card reveal delay-1">
-          <div class="tip-num">02</div>
-          <div class="tip-icon">📋</div>
-          <h4>Study the Scoring Descriptors</h4>
-          <p>Download the official CELPIP scoring descriptors and study what separates a 9 from a 10. Examiners follow these exactly — so should you in your preparation.</p>
-        </div>
-        <div class="tip-card reveal delay-2">
-          <div class="tip-num">03</div>
-          <div class="tip-icon">🎙️</div>
-          <h4>Speak for the Full Time — Always</h4>
-          <p>Silence is penalised. If you finish speaking early, expand with examples, alternatives, or caveats. A fluent monologue that fills the time always scores higher.</p>
-        </div>
-        <div class="tip-card reveal">
-          <div class="tip-num">04</div>
-          <div class="tip-icon">✉️</div>
-          <h4>Email Task: Address All 3 Points</h4>
-          <p>The writing email task gives 3 bullet points. Students who address all 3 thoroughly, in distinct paragraphs, consistently score 2–3 bands higher than those who skip one.</p>
-        </div>
-        <div class="tip-card reveal delay-1">
-          <div class="tip-num">05</div>
-          <div class="tip-icon">📝</div>
-          <h4>Listening: Note Keywords, Not Sentences</h4>
-          <p>Write keywords and numbers only — never full sentences. Your brain processes better when you listen actively and note only essentials. Transcribing distracts you.</p>
-        </div>
-        <div class="tip-card reveal delay-2">
-          <div class="tip-num">06</div>
-          <div class="tip-icon">📚</div>
-          <h4>Reading: Answers Follow Passage Order</h4>
-          <p>CELPIP reading answers almost always follow the order of the passage. If you're stuck on Q14, the answer is between where Q13 and Q15 were found.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank" rel="noopener" class="floating-wa" id="floatingWa">
+  <svg width="30" height="30" viewBox="0 0 24 24" class="wa-svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="wa-tip">Chat on WhatsApp</span>
+</a>
 
-  <!-- ── RESULTS ── -->
-  <section id="results">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="tag">Student Results</span>
-        <h2>Real Students. <em>Real Scores.</em> Real Lives Changed.</h2>
-        <p>Here are some of the score transformations our coached students have achieved.</p>
-      </div>
-      <div class="results-grid">
-        <div class="result-card reveal">
-          <div class="result-flag">🇨🇦</div>
-          <div class="result-name">Toba A.</div>
-          <div class="result-detail">Canada Immigration (PR)</div>
-          <div class="score-row">
-            <div class="score before"><span class="label">Before</span><span class="value">CLB 5</span></div>
-            <div class="arrow">→</div>
-            <div class="score after"><span class="label">After</span><span class="value">CLB 9</span></div>
-          </div>
-          <div class="result-tag">✅ PR Application Approved</div>
-        </div>
-        <div class="result-card reveal delay-1">
-          <div class="result-flag">🇦🇺</div>
-          <div class="result-name">Helen E.</div>
-          <div class="result-detail">Australia Skilled Migration</div>
-          <div class="score-row">
-            <div class="score before"><span class="label">Before</span><span class="value">CLB 6</span></div>
-            <div class="arrow">→</div>
-            <div class="score after"><span class="label">After</span><span class="value">CLB 10</span></div>
-          </div>
-          <div class="result-tag">✅ Australia PR Granted</div>
-        </div>
-        <div class="result-card reveal delay-2">
-          <div class="result-flag">🏥</div>
-          <div class="result-name">Blessing O.</div>
-          <div class="result-detail">Nursing Licensing (Canada)</div>
-          <div class="score-row">
-            <div class="score before"><span class="label">Before</span><span class="value">CLB 4</span></div>
-            <div class="arrow">→</div>
-            <div class="score after"><span class="label">After</span><span class="value">CLB 10</span></div>
-          </div>
-          <div class="result-tag">✅ NCLEX Registered</div>
-        </div>
-        <div class="result-card reveal delay-1">
-          <div class="result-flag">🇨🇦</div>
-          <div class="result-name">James W.</div>
-          <div class="result-detail">Express Entry — Max Points</div>
-          <div class="score-row">
-            <div class="score before"><span class="label">Before</span><span class="value">CLB 7</span></div>
-            <div class="arrow">→</div>
-            <div class="score after"><span class="label">After</span><span class="value">CLB 12</span></div>
-          </div>
-          <div class="result-tag">✅ Max CRS Points Achieved</div>
-        </div>
-        <div class="result-card reveal delay-2">
-          <div class="result-flag">🇦🇺</div>
-          <div class="result-name">Funmi B.</div>
-          <div class="result-detail">Australia State Nomination</div>
-          <div class="score-row">
-            <div class="score before"><span class="label">Before</span><span class="value">CLB 6</span></div>
-            <div class="arrow">→</div>
-            <div class="score after"><span class="label">After</span><span class="value">CLB 9</span></div>
-          </div>
-          <div class="result-tag">✅ State Nomination Secured</div>
-        </div>
-        <div class="result-card reveal delay-3">
-          <div class="result-flag">🇨🇦</div>
-          <div class="result-name">Chidi N.</div>
-          <div class="result-detail">Canadian Citizenship</div>
-          <div class="score-row">
-            <div class="score before"><span class="label">Before</span><span class="value">CLB 5</span></div>
-            <div class="arrow">→</div>
-            <div class="score after"><span class="label">After</span><span class="value">CLB 8</span></div>
-          </div>
-          <div class="result-tag">✅ Canadian Citizen 🎉</div>
-        </div>
-      </div>
-      <div class="results-cta reveal">
-        <p>Join 50+ students who have transformed their CELPIP scores with Tovian.</p>
-        <a href="#booking" class="btn btn-primary">Start Your Transformation Today</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── TESTIMONIALS ── -->
-  <section id="testimonials">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="tag tag-green">Testimonials</span>
-        <h2>What Our <em>Students Say</em></h2>
-        <p>Hear directly from those whose lives changed after coaching with Tovian.</p>
-      </div>
-      <div class="testi-slider">
-        <div class="testi-track" id="testiTrack">
-          <div class="testi-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>"I failed the CELPIP twice on my own. After just 2 weeks of personalised coaching with Tovian, I scored CLB 9 in every component. The speaking strategies alone were worth every naira!"</blockquote>
-            <div class="testi-author">
-              <div class="avatar">PM</div>
-              <div><strong>Priya M.</strong><small>🇨🇦 CLB 5 → 9 | Canada PR · 2-Week Coaching</small></div>
-            </div>
-          </div>
-          <div class="testi-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>"I needed CLB 10 for Australia's skilled migration. In just 2 weeks of personalised sessions, my Tovian coach identified exactly where I was losing marks and fixed everything. I hit CLB 10 on my first attempt!"</blockquote>
-            <div class="testi-author">
-              <div class="avatar">AS</div>
-              <div><strong>Arjun S.</strong><small>🇦🇺 CLB 6 → 10 | Australia PR · 2-Week Coaching</small></div>
-            </div>
-          </div>
-          <div class="testi-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>"I was terrified of the speaking section. After 2 weeks of personalised coaching on Zoom with my Tovian coach, exam day felt completely natural. CLB 10 — I still can't believe it!"</blockquote>
-            <div class="testi-author">
-              <div class="avatar">MT</div>
-              <div><strong>Maria T.</strong><small>🏥 CLB 4 → 10 | Nursing License · 2-Week Coaching</small></div>
-            </div>
-          </div>
-          <div class="testi-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>"E be like say Tovian dey use juju! In just 2 weeks of personalised coaching, my writing and speaking score jumped from CLB 5 to CLB 9. My Canada PR don approve and I dey relocate this year. Thank you ma!"</blockquote>
-            <div class="testi-author">
-              <div class="avatar">TO</div>
-              <div><strong>Toba O.</strong><small>🇳🇬🇨🇦 CLB 5 → 9 | Canada PR · 2-Week Coaching</small></div>
-            </div>
-          </div>
-          <div class="testi-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>"I was sceptical at first but Tovian Educational Consult exceeded every expectation. In 2 weeks of intensive personalised coaching via Teams, my CLB score jumped from 6 to 10. Helen dey recommend una for everybody!"</blockquote>
-            <div class="testi-author">
-              <div class="avatar">HE</div>
-              <div><strong>Helen E.</strong><small>🇳🇬🇦🇺 CLB 6 → 10 | Australia PR · 2-Week Coaching</small></div>
-            </div>
-          </div>
-          <div class="testi-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>"Very professional, very structured. I got a personalised study plan and detailed feedback after every mock session. 2 weeks of focused coaching — worth every kobo. My Canada PR is approved!"</blockquote>
-            <div class="testi-author">
-              <div class="avatar">DK</div>
-              <div><strong>David K.</strong><small>🇨🇦 CLB 7 → 12 | Max CRS Points · 2-Week Coaching</small></div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-controls">
-          <button class="testi-btn" id="prevBtn" aria-label="Previous">&#8592;</button>
-          <div class="testi-dots" id="testiDots"></div>
-          <button class="testi-btn" id="nextBtn" aria-label="Next">&#8594;</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── BOOKING ── -->
-  <section id="booking">
-    <div class="container">
-      <div class="booking-wrap">
-        <div class="booking-info reveal">
-          <span class="tag">Book a Session</span>
-          <h2>Ready to Hit <em>Your Target Score?</em></h2>
-          <p>Fill out the form and we'll contact you within 24 hours to confirm your free 30-minute consultation. No payment required to get started.</p>
-          <div class="booking-perks">
-            <div class="perk"><span class="perk-icon">✓</span><span>Free 30-min initial consultation</span></div>
-            <div class="perk"><span class="perk-icon">✓</span><span>Personalised score gap analysis</span></div>
-            <div class="perk"><span class="perk-icon">✓</span><span>Custom study plan included</span></div>
-            <div class="perk"><span class="perk-icon">✓</span><span>Online via Zoom or Microsoft Teams</span></div>
-            <div class="perk"><span class="perk-icon">✓</span><span>Flexible evenings & weekends</span></div>
-            <div class="perk"><span class="perk-icon">✓</span><span>Available worldwide from Nigeria</span></div>
-          </div>
-          <div class="contact-block">
-            <a href="tel:+2348104053137" class="contact-item">
-              <span class="contact-icon">📞</span>
-              <span>+234 810 405 3137</span>
-            </a>
-            <a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank" rel="noopener" class="contact-item whatsapp">
-              <span class="contact-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              </span>
-              <span>WhatsApp Us Directly</span>
-            </a>
-            <a href="mailto:lolaoluwatoyin&#64;gmail&#46;com" class="contact-item">
-              <span class="contact-icon">📧</span>
-              <span>lolaoluwatoyin&#64;gmail&#46;com</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="booking-form-wrap reveal delay-2">
-          <div class="form-header">
-            <h3>Book Your Free Session</h3>
-            <p>We respond within 24 hours</p>
-          </div>
-          <!-- 
-            FORMSPREE SETUP INSTRUCTIONS:
-            1. Go to formspree.io and sign up free
-            2. Create a new form — it will give you a unique form ID
-            3. Replace "YOUR_FORM_ID" below with your actual ID
-            4. Done! Submissions will go straight to lolaoluwatoyin&#64;gmail&#46;com
-          -->
-          <form class="booking-form" id="bookingForm" action="https://formspree.io/f/mwvnweaz" method="POST">
-            <input type="hidden" name="_subject" value="New CELPIP Coaching Booking - Tovian Educational Consult" />
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" placeholder="Your full name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="phone">WhatsApp / Phone *</label>
-                <input type="tel" id="phone" name="phone" placeholder="+234 800 000 0000" required />
-              </div>
-              <div class="form-group">
-                <label for="country">Country</label>
-                <select id="country" name="country">
-                  <option value="">Select country...</option>
-                  <option value="nigeria">Nigeria</option>
-                  <option value="canada">Canada</option>
-                  <option value="australia">Australia</option>
-                  <option value="uk">United Kingdom</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="goal">Immigration Goal *</label>
-                <select id="goal" name="goal" required>
-                  <option value="">Select your goal...</option>
-                  <option value="canada-pr">Canada PR (Express Entry / PNP)</option>
-                  <option value="australia-pr">Australia PR (Skilled Migration)</option>
-                  <option value="citizenship">Canadian Citizenship</option>
-                  <option value="nursing">Nursing Licensing</option>
-                  <option value="engineering">Engineering (PEng)</option>
-                  <option value="other-pro">Other Professional Licensing</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="target">Target CLB Score *</label>
-                <select id="target" name="target" required>
-                  <option value="">Select target...</option>
-                  <option value="clb7">CLB 7</option>
-                  <option value="clb8">CLB 8</option>
-                  <option value="clb9">CLB 9</option>
-                  <option value="clb10">CLB 10</option>
-                  <option value="clb11">CLB 11+</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="session">Preferred Package *</label>
-                <select id="session" name="session" required>
-                  <option value="">Choose a package...</option>
-                  <option value="free">Free 30-Min Consultation</option>
-                  <option value="speaking">Speaking Only (4 sessions)</option>
-                  <option value="writing">Writing Only (4 sessions)</option>
-                  <option value="full">Full Prep Package (All 4 skills)</option>
-                  <option value="intensive">Intensive 2-Week Sprint</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="platform">Preferred Platform *</label>
-                <select id="platform" name="platform" required>
-                  <option value="">Select platform...</option>
-                  <option value="zoom">Zoom</option>
-                  <option value="teams">Microsoft Teams</option>
-                  <option value="whatsapp">WhatsApp Video</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="date">Preferred Date</label>
-                <input type="date" id="date" name="date" />
-              </div>
-              <div class="form-group">
-                <label for="time">Preferred Time</label>
-                <select id="time" name="time">
-                  <option value="">Select a time...</option>
-                  <option value="morning">Morning (9am – 12pm)</option>
-                  <option value="afternoon">Afternoon (12pm – 5pm)</option>
-                  <option value="evening">Evening (5pm – 9pm)</option>
-                  <option value="weekend">Weekend (Flexible)</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="message">Current Score & Anything Else?</label>
-              <textarea id="message" name="message" rows="3" placeholder="E.g. My current CELPIP score is CLB 6. My exam is in March. I struggle most with speaking..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-              📅 Book My Free Consultation
-            </button>
-            <p class="form-note">We'll confirm within 24 hours via email or WhatsApp. No payment needed to book.</p>
-          </form>
-          <div class="form-success" id="formSuccess">
-            <div class="success-icon">🎉</div>
-            <h3>Booking Received!</h3>
-            <p>Thank you! We'll reach out within 24 hours to confirm your session. Get ready to hit that target score!</p>
-            <a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank" class="btn btn-whatsapp" style="margin-top:1.5rem">
-              Chat on WhatsApp While You Wait →
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ── -->
-  <footer id="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <img src="logo.jpeg" alt="Tovian Educational Consult" class="footer-logo" />
-          <p>Nigeria's trusted CELPIP coaching service — helping students achieve their target score for Canada PR, Australia PR, and professional licensing.</p>
-          <div class="footer-flags">
-            <span title="Canada">🇨🇦</span>
-            <span title="Australia">🇦🇺</span>
-            <span title="Nigeria">🇳🇬</span>
-            <span title="United Kingdom">🇬🇧</span>
-          </div>
-          <div class="social-links">
-            <a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-wa">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            </a>
-            <a href="mailto:lolaoluwatoyin&#64;gmail&#46;com" aria-label="Email">📧</a>
-            <a href="tel:+2348104053137" aria-label="Phone">📞</a>
-          </div>
-        </div>
-        <div class="footer-links">
-          <h5>Services</h5>
-          <ul>
-            <li><a href="#about">Listening Coaching</a></li>
-            <li><a href="#about">Reading Coaching</a></li>
-            <li><a href="#about">Writing Coaching</a></li>
-            <li><a href="#about">Speaking Coaching</a></li>
-            <li><a href="#about">Full Prep Package</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h5>CELPIP For</h5>
-          <ul>
-            <li><a href="#recognition">🇨🇦 Canada PR</a></li>
-            <li><a href="#recognition">🇦🇺 Australia PR</a></li>
-            <li><a href="#recognition">Canadian Citizenship</a></li>
-            <li><a href="#recognition">Nursing Licensing</a></li>
-            <li><a href="#recognition">Engineering (PEng)</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h5>Contact Us</h5>
-          <ul>
-            <li><a href="mailto:lolaoluwatoyin&#64;gmail&#46;com">lolaoluwatoyin&#64;gmail&#46;com</a></li>
-            <li><a href="tel:+2348104053137">+234 810 405 3137</a></li>
-            <li><a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank">WhatsApp Us</a></li>
-            <li><span>Mon–Fri, 9am–10pm WAT</span></li>
-            <li><span>Sessions via Zoom or Teams</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Tovian Educational Consult. All rights reserved.</p>
-        <p>Not affiliated with Paragon Testing Enterprises or UBC.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ── FLOATING WHATSAPP ── -->
-  <a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank" rel="noopener" class="floating-wa" id="floatingWa" aria-label="Chat on WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.4
+<script>
+const navbar=document.getElementById('navbar');
+const floatingWa=document.getElementById('floatingWa');
+window.addEventListener('scroll',()=>{
+  navbar.classList.toggle('scrolled',window.scrollY>60);
+  floatingWa.classList.toggle('visible',window.scrollY>400);
+});
+const burger=document.getElementById('burger');
+const navLinks=document.getElementById('navLinks');
+burger.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+document.addEventListener('click',e=>{if(!navbar.contains(e.target))navLinks.classList.remove('open')});
+const ro=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+const track=document.getElementById('testiTrack');
+const dotsWrap=document.getElementById('testiDots');
+const cards=[...track.querySelectorAll('.testi-card')];
+let cur=0;
+function vis(){return window.innerWidth<=768?1:window.innerWidth<=960?2:3}
+let vc=vis();
+function buildDots(){dotsWrap.innerHTML='';const total=Math.ceil(cards.length/vc);for(let i=0;i<total;i++){const d=document.createElement('button');d.className='dot'+(i===cur?' active':'');d.addEventListener('click',()=>go(i));dotsWrap.appendChild(d);}}
+function updDots(){dotsWrap.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===cur))}
+function go(idx){const max=Math.ceil(cards.length/vc)-1;cur=Math.max(0,Math.min(idx,max));const w=cards[0].offsetWidth+24;track.style.transform=`translateX(-${cur*vc*w}px)`;updDots();}
+document.getElementById('prevBtn').addEventListener('click',()=>go(cur-1));
+document.getElementById('nextBtn').addEventListener('click',()=>{const max=Math.ceil(cards.length/vc)-1;go(cur>=max?0:cur+1)});
+let ap=setInterval(()=>{const max=Math.ceil(cards.length/vc)-1;go(cur>=max?0:cur+1)},5500);
+track.addEventListener('mouseenter',()=>clearInterval(ap));
+track.addEventListener('mouseleave',()=>{ap=setInterval(()=>{const max=Math.ceil(cards.length/vc)-1;go(cur>=max?0:cur+1)},5500)});
+window.addEventListener('resize',()=>{vc=vis();cur=0;buildDots();go(0)});
+buildDots();
+function countUp(el,target,suffix){const dur=2000,start=performance.now();(function tick(now){const p=Math.min((now-start)/dur,1);const ease=1-Math.pow(1-p,3);el.textContent=Math.round(ease*target)+suffix;if(p<1)requestAnimationFrame(tick)})(start);}
+const statsEl=document.querySelector('.hero-stats');
+if(statsEl){new IntersectionObserver(entries=>{if(entries[0].isIntersecting){countUp(document.getElementById('cntStudents'),50,'+');countUp(document.getElementById('cntPass'),96,'%');countUp(document.getElementById('cntYears'),5,'+');}},{threshold:.5}).observe(statsEl);}
+</script>
+</body>
+</html>
