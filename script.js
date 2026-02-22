@@ -120,20 +120,11 @@ if (dateInput) {
   dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
 }
 
-form.addEventListener('submit', async (e) => {
-  // If Formspree ID is not yet set up, handle locally
-  if (form.action.includes('YOUR_FORM_ID')) {
-    e.preventDefault();
-    const btn = form.querySelector('[type="submit"]');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-
-    setTimeout(() => {
-      form.style.display = 'none';
-      formSuccess.classList.add('show');
-    }, 1400);
-    return;
-  }
+form.addEventListener('submit', function() {
+  const btn = form.querySelector('[type="submit"]');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+});
   // Otherwise let Formspree handle the submission naturally
   // (don't preventDefault so the form posts to Formspree)
   const btn = form.querySelector('[type="submit"]');
