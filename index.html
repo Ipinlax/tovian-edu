@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
 <style>
+/* ── RESET ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --navy:#1A2B5E;--navy2:#142251;--navy3:#0E1A3D;
@@ -34,11 +35,17 @@ em{color:var(--green);font-style:italic}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 .container{max-width:1180px;margin:0 auto;padding:0 2rem}
+
+/* ── REVEAL ── */
 .reveal{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* ── TAG ── */
 .tag{display:inline-block;background:rgba(26,43,94,.08);border:1.5px solid rgba(26,43,94,.15);color:var(--navy);padding:.35rem 1rem;border-radius:100px;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}
 .tag-g{background:rgba(46,125,50,.09);border-color:rgba(46,125,50,.22);color:var(--green)}
+
+/* ── BUTTONS ── */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem 2rem;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;transition:var(--tr);border:2px solid transparent;white-space:nowrap}
 .btn-primary{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff}
 .btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(26,43,94,.32)}
@@ -47,10 +54,14 @@ img{display:block;max-width:100%}
 .btn-wa{background:var(--wa);color:#fff}
 .btn-wa:hover{background:#1eb85a;transform:translateY(-2px);box-shadow:0 12px 32px rgba(37,211,102,.35)}
 .btn-full{width:100%}
+
+/* ── ANNOUNCE BAR ── */
 .announce-bar{background:linear-gradient(90deg,var(--navy) 0%,var(--navy2) 55%,var(--green) 100%);color:#fff;text-align:center;padding:.65rem 2rem;font-size:.83rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;position:relative;z-index:1001}
 .announce-bar strong{color:var(--gold2)}
 .announce-cta{background:var(--gold);color:var(--navy);padding:.3rem .9rem;border-radius:100px;font-size:.77rem;font-weight:700;transition:var(--tr)}
 .announce-cta:hover{background:var(--gold2)}
+
+/* ── NAVBAR ── */
 #navbar{position:fixed;top:36px;left:0;right:0;z-index:1000;padding:1rem 0;transition:all var(--tr)}
 #navbar.scrolled{top:0;background:rgba(255,255,255,.97);backdrop-filter:blur(18px);box-shadow:var(--sh);padding:.75rem 0}
 .nav-inner{max-width:1180px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
@@ -63,6 +74,8 @@ img{display:block;max-width:100%}
 .nav-cta:hover{background:var(--green2)!important;color:#fff!important;transform:translateY(-1px);box-shadow:0 6px 20px rgba(46,125,50,.3)}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
 .burger span{display:block;width:26px;height:2.5px;background:var(--navy);border-radius:2px;transition:var(--tr)}
+
+/* ── HERO ── */
 #hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:10rem 2rem 5rem;background:linear-gradient(155deg,#EEF3FF 0%,#E6F4E8 45%,#FFF8EC 100%)}
 .hero-bg{position:absolute;inset:0;pointer-events:none}
 .orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.22}
@@ -71,20 +84,25 @@ img{display:block;max-width:100%}
 .orb3{width:260px;height:260px;background:radial-gradient(circle,var(--gold),transparent);top:45%;right:22%;opacity:.14;animation:float 7s ease-in-out infinite}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(26,43,94,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(26,43,94,.04) 1px,transparent 1px);background-size:50px 50px}
 @keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(12px,-14px) scale(1.04)}66%{transform:translate(-10px,12px) scale(.97)}}
+
 .hero-content{position:relative;max-width:1180px;margin:0 auto;width:100%}
 .hero-flags{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem}
 .flag-badge{display:inline-flex;align-items:center;gap:.45rem;background:#fff;border:1.5px solid rgba(26,43,94,.12);padding:.42rem 1.1rem;border-radius:100px;font-size:.82rem;font-weight:700;color:var(--navy);box-shadow:var(--sh)}
 .flag-badge .flag{font-size:1.3rem}
 .flag-plus{font-size:1.3rem;font-weight:800;color:var(--green)}
 .flag-label{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);padding:.35rem .95rem;border-radius:100px;font-size:.74rem;font-weight:700;letter-spacing:.04em}
+
 #hero h1{max-width:14ch;margin-bottom:1.5rem}
 .hero-sub{max-width:56ch;font-size:1.08rem;color:var(--text);margin-bottom:2.5rem;line-height:1.9}
 .hero-sub strong{color:var(--navy);font-weight:700}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:4rem}
+
 .hero-stats{display:inline-flex;align-items:center;gap:2.5rem;flex-wrap:wrap;background:#fff;padding:1.5rem 2.5rem;border-radius:var(--radius);box-shadow:var(--sh-lg);border:1.5px solid rgba(26,43,94,.06)}
 .stat span{display:block;font-family:'Playfair Display',serif;font-size:2.3rem;font-weight:800;color:var(--navy);line-height:1}
 .stat small{font-size:.73rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;display:block;margin-top:.2rem}
 .div-v{width:1px;height:46px;background:var(--light)}
+
+/* ── RECOGNITION ── */
 #recognition{padding:0}
 .recog-inner{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 55%,var(--green) 100%);padding:3rem 2rem}
 .recog-title{text-align:center;margin-bottom:2rem}
@@ -95,9 +113,13 @@ img{display:block;max-width:100%}
 .recog-card strong{display:block;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:.25rem}
 .recog-card p{font-size:.82rem;color:rgba(255,255,255,.7);line-height:1.5}
 .recog-div{width:1px;height:60px;background:rgba(255,255,255,.15);flex-shrink:0}
+
+/* ── SECTION HEADER ── */
 .sec-hdr{text-align:center;max-width:640px;margin:0 auto 4rem}
 .sec-hdr h2{margin-bottom:.75rem}
 .sec-hdr p{color:var(--muted);font-size:1rem}
+
+/* ── ABOUT ── */
 #about{padding:7rem 0}
 .about-intro{display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;margin-bottom:5rem}
 .about-text h2{margin-bottom:1rem}
@@ -109,6 +131,8 @@ img{display:block;max-width:100%}
 .badge-icon{font-size:1.5rem}
 .about-badge strong{display:block;font-size:.9rem;color:var(--navy);font-weight:700}
 .about-badge small{font-size:.72rem;color:var(--navy2)}
+
+/* SERVICES GRID */
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}
 .svc-card{background:#fff;border:1.5px solid var(--light);border-radius:var(--radius);padding:2rem;transition:border-color var(--tr),transform var(--tr),box-shadow var(--tr)}
 .svc-card:hover{border-color:var(--green3);transform:translateY(-5px);box-shadow:var(--sh-lg)}
@@ -119,6 +143,8 @@ img{display:block;max-width:100%}
 .svc-card ul{list-style:none;display:flex;flex-direction:column;gap:.45rem}
 .svc-card ul li{font-size:.86rem;color:var(--text);padding-left:1.4rem;position:relative}
 .svc-card ul li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700}
+
+/* ── TIPS ── */
 #tips{padding:7rem 0;background:linear-gradient(180deg,var(--light) 0%,#fff 100%)}
 .tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
 .tip-card{background:#fff;border:1.5px solid var(--light);border-radius:var(--radius);padding:2rem;position:relative;overflow:hidden;transition:all var(--tr)}
@@ -129,6 +155,8 @@ img{display:block;max-width:100%}
 .tip-icon{font-size:2rem;margin-bottom:.7rem}
 .tip-card h4{color:var(--navy);margin-bottom:.7rem}
 .tip-card p{font-size:.9rem;color:var(--muted);line-height:1.85}
+
+/* ── RESULTS ── */
 #results{padding:7rem 0}
 .results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-bottom:3rem}
 .res-card{background:#fff;border:1.5px solid var(--light);border-radius:var(--radius);padding:2rem;transition:all var(--tr);position:relative;overflow:hidden}
@@ -150,6 +178,8 @@ img{display:block;max-width:100%}
 .res-tag{font-size:.83rem;color:var(--success);font-weight:600}
 .results-cta{text-align:center;padding:3rem;background:linear-gradient(135deg,rgba(26,43,94,.04),rgba(46,125,50,.04));border:1.5px solid rgba(46,125,50,.2);border-radius:var(--radius)}
 .results-cta p{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);margin-bottom:1.5rem}
+
+/* ── TESTIMONIALS ── */
 #testimonials{padding:7rem 0;background:linear-gradient(180deg,var(--light) 0%,#fff 100%)}
 .testi-slider{overflow:hidden;position:relative}
 .testi-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1);gap:1.5rem}
@@ -167,6 +197,42 @@ blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.
 .t-dots{display:flex;gap:8px}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--light);border:1.5px solid rgba(26,43,94,.15);cursor:pointer;transition:var(--tr)}
 .dot.active{background:var(--navy);border-color:var(--navy);width:24px;border-radius:100px}
+
+/* ── BOOKING ── */
+#booking{padding:7rem 0}
+.booking-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:5rem;align-items:start}
+.booking-info h2{margin-bottom:1rem}
+.booking-info>p{font-size:1rem;color:var(--muted);margin-bottom:2rem}
+.perks{display:flex;flex-direction:column;gap:.8rem;margin-bottom:2rem}
+.perk{display:flex;align-items:center;gap:.75rem;font-size:.92rem;color:var(--text)}
+.perk-ic{width:24px;height:24px;border-radius:50%;background:rgba(46,125,50,.1);border:1.5px solid rgba(46,125,50,.25);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:.75rem;flex-shrink:0;font-weight:700}
+.contact-block{display:flex;flex-direction:column;gap:.75rem}
+.ci{display:flex;align-items:center;gap:.75rem;padding:.8rem 1rem;background:var(--light);border-radius:10px;font-size:.9rem;font-weight:600;color:var(--navy);transition:var(--tr);border:1.5px solid transparent}
+.ci:hover{border-color:var(--navy);background:#fff}
+.ci.wa{color:var(--wa)}.ci.wa:hover{border-color:var(--wa);background:rgba(37,211,102,.05)}
+.ci-ico{font-size:1.2rem;flex-shrink:0}
+
+.form-wrap{background:#fff;border:1.5px solid var(--light);border-radius:20px;padding:2.5rem;box-shadow:var(--sh-lg)}
+.form-hdr{margin-bottom:2rem;border-bottom:1.5px solid var(--light);padding-bottom:1.25rem}
+.form-hdr h3{color:var(--navy);font-size:1.5rem;margin-bottom:.25rem}
+.form-hdr p{font-size:.84rem;color:var(--muted)}
+.booking-form{display:flex;flex-direction:column;gap:1rem}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{display:flex;flex-direction:column;gap:.4rem}
+.fg label{font-size:.79rem;font-weight:700;color:var(--navy);letter-spacing:.04em;text-transform:uppercase}
+.fg input,.fg select,.fg textarea{background:var(--light);border:1.5px solid transparent;border-radius:8px;padding:.78rem 1rem;color:var(--navy);font-family:'DM Sans',sans-serif;font-size:.93rem;outline:none;transition:var(--tr);width:100%}
+.fg select option{background:#fff;color:var(--navy)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{background:#fff;border-color:var(--green);box-shadow:0 0 0 3px rgba(46,125,50,.1)}
+.fg textarea{resize:vertical;min-height:85px}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--muted)}
+.form-note{font-size:.77rem;color:var(--muted);text-align:center;margin-top:.5rem}
+.form-success{display:none;text-align:center;padding:3rem 2rem}
+.form-success.show{display:block}
+.suc-ico{font-size:3.2rem;margin-bottom:1rem}
+.form-success h3{color:var(--navy);margin-bottom:.75rem;font-size:2rem}
+.form-success p{color:var(--muted);margin-bottom:1.5rem}
+
+/* ── FOOTER ── */
 #footer{background:var(--navy3);padding:5rem 0 2rem}
 .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
 .footer-logo{height:68px;width:auto;object-fit:contain;background:#fff;border-radius:12px;padding:.5rem 1rem;margin-bottom:1.25rem}
@@ -183,14 +249,21 @@ blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.
 .fl ul li a:hover{color:#fff}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:2rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .footer-bottom p{font-size:.79rem;color:rgba(255,255,255,.32)}
+
+/* ── FLOATING WA ── */
 .floating-wa{position:fixed;bottom:2rem;right:2rem;width:62px;height:62px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;z-index:900;box-shadow:0 8px 28px rgba(37,211,102,.48);opacity:0;transform:scale(.8);transition:var(--tr);pointer-events:none}
 .floating-wa.visible{opacity:1;transform:scale(1);pointer-events:all}
 .floating-wa:hover{transform:scale(1.1);box-shadow:0 14px 38px rgba(37,211,102,.56)}
 .wa-tip{position:absolute;right:72px;background:var(--navy);color:#fff;padding:.42rem 1rem;border-radius:8px;font-size:.79rem;font-weight:600;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity var(--tr)}
 .floating-wa:hover .wa-tip{opacity:1}
 .wa-tip::after{content:'';position:absolute;left:100%;top:50%;transform:translateY(-50%);border:5px solid transparent;border-left-color:var(--navy)}
+
+/* ── WA SVG ── */
 .wa-svg{fill:currentColor}
+
+/* ── RESPONSIVE ── */
 @media(max-width:960px){
+  .booking-wrap{grid-template-columns:1fr;gap:3rem}
   .about-intro{grid-template-columns:1fr}
   .about-img-wrap{display:flex;justify-content:center}
   .footer-inner{grid-template-columns:1fr 1fr}
@@ -208,6 +281,7 @@ blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.
   .div-v{display:none}
   .services-grid,.tips-grid,.results-grid{grid-template-columns:1fr}
   .testi-card{flex:0 0 100%}
+  .f-row{grid-template-columns:1fr}
   .footer-inner{grid-template-columns:1fr}
   .footer-bottom{flex-direction:column}
   .recog-cards{flex-direction:column}
@@ -216,17 +290,20 @@ blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.
 }
 @media(max-width:480px){
   h1{font-size:2.4rem}h2{font-size:1.9rem}
+  .form-wrap{padding:1.5rem}
   .hero-flags{gap:.5rem}
 }
 </style>
 </head>
 <body>
 
+<!-- ANNOUNCE BAR -->
 <div class="announce-bar">
   <span>🎉 CELPIP is now accepted for <strong>Canada PR</strong> and <strong>Australia PR</strong> — Start Your Journey Today!</span>
   <a href="#booking" class="announce-cta">Book Free Session →</a>
 </div>
 
+<!-- NAV -->
 <nav id="navbar">
   <div class="nav-inner">
     <a href="#hero"><img src="logo.jpeg" alt="Tovian Educational Consult" class="nav-logo" /></a>
@@ -242,6 +319,7 @@ blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.
   </div>
 </nav>
 
+<!-- HERO -->
 <section id="hero">
   <div class="hero-bg">
     <div class="orb orb1"></div>
@@ -277,26 +355,37 @@ blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.
   </div>
 </section>
 
+<!-- RECOGNITION -->
 <section id="recognition">
   <div class="recog-inner">
     <div class="recog-title"><span class="recog-label">CELPIP Officially Accepted By</span></div>
     <div class="recog-cards">
-      <div class="recog-card"><span class="recog-flag">🇨🇦</span><div><strong>Canada Permanent Residency</strong><p>Express Entry, PNP, Family Sponsorship &amp; Citizenship</p></div></div>
+      <div class="recog-card">
+        <span class="recog-flag">🇨🇦</span>
+        <div><strong>Canada Permanent Residency</strong><p>Express Entry, PNP, Family Sponsorship &amp; Citizenship</p></div>
+      </div>
       <div class="recog-div"></div>
-      <div class="recog-card"><span class="recog-flag">🇦🇺</span><div><strong>Australia Permanent Residency</strong><p>Skilled Migration, State Nomination &amp; Citizenship</p></div></div>
+      <div class="recog-card">
+        <span class="recog-flag">🇦🇺</span>
+        <div><strong>Australia Permanent Residency</strong><p>Skilled Migration, State Nomination &amp; Citizenship</p></div>
+      </div>
       <div class="recog-div"></div>
-      <div class="recog-card"><span class="recog-flag">🏥</span><div><strong>Professional Licensing</strong><p>Nursing, Engineering, Medicine &amp; More</p></div></div>
+      <div class="recog-card">
+        <span class="recog-flag">🏥</span>
+        <div><strong>Professional Licensing</strong><p>Nursing, Engineering, Medicine &amp; More</p></div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
   <div class="container">
     <div class="about-intro reveal">
       <div class="about-text">
         <span class="tag">Why Tovian?</span>
         <h2>5+ Years Turning <em>Test Anxiety</em> Into Target Scores</h2>
-        <p>At Tovian Educational Consult, we don't just teach CELPIP — we build confidence. Every coaching programme is tailored to your specific score gap, exam date, and immigration goal.</p>
+        <p>At Tovian Educational Consult, we don't just teach CELPIP — we build confidence. Every coaching programme is tailored to your specific score gap, exam date, and immigration goal. Whether you need CLB 7 for PR or CLB 10 for professional licensing, we have a proven path for you.</p>
         <p>Sessions run via <strong>Zoom or Microsoft Teams</strong> — available to students across Nigeria, Canada, Australia, the UK, and beyond.</p>
         <div class="about-actions">
           <a href="#booking" class="btn btn-primary">Start Free Consultation</a>
@@ -305,20 +394,55 @@ blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.
       </div>
       <div class="about-img-wrap">
         <img src="logo.jpeg" alt="Tovian Educational Consult" class="about-logo" />
-        <div class="about-badge"><div class="badge-icon">🏆</div><div><strong>Top Rated</strong><small>CELPIP Coach</small></div></div>
+        <div class="about-badge">
+          <div class="badge-icon">🏆</div>
+          <div><strong>Top Rated</strong><small>CELPIP Coach</small></div>
+        </div>
       </div>
     </div>
+
     <div class="services-grid">
-      <div class="svc-card reveal"><div class="svc-icon ic-g">🎧</div><h3>Listening Mastery</h3><p>Targeted exercises that train you to catch every detail — from daily conversations to complex news items.</p><ul><li>Mock test simulations</li><li>Speed &amp; comprehension drills</li><li>Accent familiarisation</li></ul></div>
-      <div class="svc-card reveal d1"><div class="svc-icon ic-n">📖</div><h3>Reading Strategies</h3><p>Navigate dense passages and answer all 38 questions accurately within the strict time limit.</p><ul><li>Skimming &amp; scanning techniques</li><li>Vocabulary building</li><li>Inference &amp; analysis skills</li></ul></div>
-      <div class="svc-card reveal d2"><div class="svc-icon ic-go">✍️</div><h3>Writing Excellence</h3><p>Master the email task and survey response with proven frameworks that score top marks every time.</p><ul><li>Email writing templates</li><li>Task 2 survey frameworks</li><li>Personalised written feedback</li></ul></div>
-      <div class="svc-card reveal d3"><div class="svc-icon ic-g">🎙️</div><h3>Speaking Confidence</h3><p>Eliminate filler words, improve fluency, and nail all 8 speaking tasks with structured responses.</p><ul><li>Live mock interviews</li><li>Task-specific frameworks</li><li>Pronunciation coaching</li></ul></div>
-      <div class="svc-card reveal d1"><div class="svc-icon ic-n">📅</div><h3>1-on-1 Sessions</h3><p>Private coaching on Zoom or Teams, tailored to your weakest areas and scheduled around your life.</p><ul><li>Flexible evenings &amp; weekends</li><li>Progress tracking</li><li>Custom study plan included</li></ul></div>
-      <div class="svc-card reveal d2"><div class="svc-icon ic-go">📦</div><h3>Full Prep Package</h3><p>Our all-inclusive 2-week bundle covers all four components with unlimited materials and a score guarantee.</p><ul><li>All 4 skill areas covered</li><li>Score improvement guarantee</li><li>Lifetime resource access</li></ul></div>
+      <div class="svc-card reveal">
+        <div class="svc-icon ic-g">🎧</div>
+        <h3>Listening Mastery</h3>
+        <p>Targeted exercises that train you to catch every detail — from daily conversations to complex news items.</p>
+        <ul><li>Mock test simulations</li><li>Speed &amp; comprehension drills</li><li>Accent familiarisation</li></ul>
+      </div>
+      <div class="svc-card reveal d1">
+        <div class="svc-icon ic-n">📖</div>
+        <h3>Reading Strategies</h3>
+        <p>Navigate dense passages and answer all 38 questions accurately within the strict time limit.</p>
+        <ul><li>Skimming &amp; scanning techniques</li><li>Vocabulary building</li><li>Inference &amp; analysis skills</li></ul>
+      </div>
+      <div class="svc-card reveal d2">
+        <div class="svc-icon ic-go">✍️</div>
+        <h3>Writing Excellence</h3>
+        <p>Master the email task and survey response with proven frameworks that score top marks every time.</p>
+        <ul><li>Email writing templates</li><li>Task 2 survey frameworks</li><li>Personalised written feedback</li></ul>
+      </div>
+      <div class="svc-card reveal d3">
+        <div class="svc-icon ic-g">🎙️</div>
+        <h3>Speaking Confidence</h3>
+        <p>Eliminate filler words, improve fluency, and nail all 8 speaking tasks with structured responses.</p>
+        <ul><li>Live mock interviews</li><li>Task-specific frameworks</li><li>Pronunciation coaching</li></ul>
+      </div>
+      <div class="svc-card reveal d1">
+        <div class="svc-icon ic-n">📅</div>
+        <h3>1-on-1 Sessions</h3>
+        <p>Private coaching on Zoom or Teams, tailored to your weakest areas and scheduled around your life.</p>
+        <ul><li>Flexible evenings &amp; weekends</li><li>Progress tracking</li><li>Custom study plan included</li></ul>
+      </div>
+      <div class="svc-card reveal d2">
+        <div class="svc-icon ic-go">📦</div>
+        <h3>Full Prep Package</h3>
+        <p>Our all-inclusive 2-week bundle covers all four components with unlimited materials and a score guarantee.</p>
+        <ul><li>All 4 skill areas covered</li><li>Score improvement guarantee</li><li>Lifetime resource access</li></ul>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- TIPS -->
 <section id="tips">
   <div class="container">
     <div class="sec-hdr reveal">
@@ -337,6 +461,7 @@ blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.
   </div>
 </section>
 
+<!-- RESULTS -->
 <section id="results">
   <div class="container">
     <div class="sec-hdr reveal">
@@ -345,12 +470,36 @@ blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.
       <p>Score transformations our coached students have achieved in just 2 weeks.</p>
     </div>
     <div class="results-grid">
-      <div class="res-card reveal"><div class="res-flag">🇨🇦</div><div class="res-name">Toba A.</div><div class="res-detail">Canada Immigration (PR)</div><div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 5</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 9</span></div></div><div class="res-tag">✅ PR Application Approved</div></div>
-      <div class="res-card reveal d1"><div class="res-flag">🇦🇺</div><div class="res-name">Helen E.</div><div class="res-detail">Australia Skilled Migration</div><div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 6</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 10</span></div></div><div class="res-tag">✅ Australia PR Granted</div></div>
-      <div class="res-card reveal d2"><div class="res-flag">🏥</div><div class="res-name">Blessing O.</div><div class="res-detail">Nursing Licensing (Canada)</div><div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 4</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 10</span></div></div><div class="res-tag">✅ NCLEX Registered</div></div>
-      <div class="res-card reveal d1"><div class="res-flag">🇨🇦</div><div class="res-name">James W.</div><div class="res-detail">Express Entry — Max Points</div><div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 7</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 12</span></div></div><div class="res-tag">✅ Max CRS Points Achieved</div></div>
-      <div class="res-card reveal d2"><div class="res-flag">🇦🇺</div><div class="res-name">Funmi B.</div><div class="res-detail">Australia State Nomination</div><div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 6</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 9</span></div></div><div class="res-tag">✅ State Nomination Secured</div></div>
-      <div class="res-card reveal d3"><div class="res-flag">🇨🇦</div><div class="res-name">Chidi N.</div><div class="res-detail">Canadian Citizenship</div><div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 5</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 8</span></div></div><div class="res-tag">✅ Canadian Citizen 🎉</div></div>
+      <div class="res-card reveal">
+        <div class="res-flag">🇨🇦</div><div class="res-name">Toba A.</div><div class="res-detail">Canada Immigration (PR)</div>
+        <div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 5</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 9</span></div></div>
+        <div class="res-tag">✅ PR Application Approved</div>
+      </div>
+      <div class="res-card reveal d1">
+        <div class="res-flag">🇦🇺</div><div class="res-name">Helen E.</div><div class="res-detail">Australia Skilled Migration</div>
+        <div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 6</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 10</span></div></div>
+        <div class="res-tag">✅ Australia PR Granted</div>
+      </div>
+      <div class="res-card reveal d2">
+        <div class="res-flag">🏥</div><div class="res-name">Blessing O.</div><div class="res-detail">Nursing Licensing (Canada)</div>
+        <div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 4</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 10</span></div></div>
+        <div class="res-tag">✅ NCLEX Registered</div>
+      </div>
+      <div class="res-card reveal d1">
+        <div class="res-flag">🇨🇦</div><div class="res-name">James W.</div><div class="res-detail">Express Entry — Max Points</div>
+        <div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 7</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 12</span></div></div>
+        <div class="res-tag">✅ Max CRS Points Achieved</div>
+      </div>
+      <div class="res-card reveal d2">
+        <div class="res-flag">🇦🇺</div><div class="res-name">Funmi B.</div><div class="res-detail">Australia State Nomination</div>
+        <div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 6</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 9</span></div></div>
+        <div class="res-tag">✅ State Nomination Secured</div>
+      </div>
+      <div class="res-card reveal d3">
+        <div class="res-flag">🇨🇦</div><div class="res-name">Chidi N.</div><div class="res-detail">Canadian Citizenship</div>
+        <div class="score-row"><div class="score before"><span class="lbl">Before</span><span class="val">CLB 5</span></div><div class="arrow">→</div><div class="score after"><span class="lbl">After</span><span class="val">CLB 8</span></div></div>
+        <div class="res-tag">✅ Canadian Citizen 🎉</div>
+      </div>
     </div>
     <div class="results-cta reveal">
       <p>Join 50+ students who have transformed their scores with Tovian in just 2 weeks.</p>
@@ -359,6 +508,7 @@ blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="container">
     <div class="sec-hdr reveal">
@@ -368,12 +518,36 @@ blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.
     </div>
     <div class="testi-slider">
       <div class="testi-track" id="testiTrack">
-        <div class="testi-card"><div class="stars">★★★★★</div><blockquote>"E be like say Tovian dey use juju! In just 2 weeks of personalised coaching, my writing and speaking score jumped from CLB 5 to CLB 9. My Canada PR don approve and I dey relocate this year. Thank you ma!"</blockquote><div class="t-author"><div class="avatar">TA</div><div><strong>Toba A.</strong><small>🇳🇬🇨🇦 CLB 5 → 9 | Canada PR · 2-Week Coaching</small></div></div></div>
-        <div class="testi-card"><div class="stars">★★★★★</div><blockquote>"I was sceptical at first but Tovian Educational Consult exceeded every expectation. In 2 weeks of intensive coaching via Teams, my CLB score jumped from 6 to 10. I dey recommend them for everybody!"</blockquote><div class="t-author"><div class="avatar">HE</div><div><strong>Helen E.</strong><small>🇳🇬🇦🇺 CLB 6 → 10 | Australia PR · 2-Week Coaching</small></div></div></div>
-        <div class="testi-card"><div class="stars">★★★★★</div><blockquote>"I needed CLB 10 for nursing licensing. In 2 weeks of personalised sessions, my coach identified exactly where I was losing marks. I hit CLB 10 on my first attempt — God bless Tovian!"</blockquote><div class="t-author"><div class="avatar">BO</div><div><strong>Blessing O.</strong><small>🇳🇬🏥 CLB 4 → 10 | Nursing License · 2-Week Coaching</small></div></div></div>
-        <div class="testi-card"><div class="stars">★★★★★</div><blockquote>"Very professional, very structured. I got a personalised study plan and feedback after every mock session. 2 weeks of focused coaching — worth every kobo. My Canada PR is approved!"</blockquote><div class="t-author"><div class="avatar">JW</div><div><strong>James W.</strong><small>🇨🇦 CLB 7 → 12 | Max CRS Points · 2-Week Coaching</small></div></div></div>
-        <div class="testi-card"><div class="stars">★★★★★</div><blockquote>"After 2 weeks of personalised coaching on Zoom, the CELPIP speaking section felt easy. My coach was patient, encouraging, and so knowledgeable. CLB 9 secured and Australia visa approved!"</blockquote><div class="t-author"><div class="avatar">FB</div><div><strong>Funmi B.</strong><small>🇳🇬🇦🇺 CLB 6 → 9 | Australia Nominated · 2-Week Coaching</small></div></div></div>
-        <div class="testi-card"><div class="stars">★★★★★</div><blockquote>"I failed twice before finding Tovian. Just 2 weeks of personalised coaching changed everything. The reading and listening tips alone were game-changing. CLB 8 achieved — I am now a Canadian citizen!"</blockquote><div class="t-author"><div class="avatar">CN</div><div><strong>Chidi N.</strong><small>🇳🇬🇨🇦 CLB 5 → 8 | Canadian Citizen · 2-Week Coaching</small></div></div></div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"E be like say Tovian dey use juju! In just 2 weeks of personalised coaching, my writing and speaking score jumped from CLB 5 to CLB 9. My Canada PR don approve and I dey relocate this year. Thank you ma!"</blockquote>
+          <div class="t-author"><div class="avatar">TA</div><div><strong>Toba A.</strong><small>🇳🇬🇨🇦 CLB 5 → 9 | Canada PR · 2-Week Coaching</small></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"I was sceptical at first but Tovian Educational Consult exceeded every expectation. In 2 weeks of intensive coaching via Teams, my CLB score jumped from 6 to 10. I dey recommend them for everybody!"</blockquote>
+          <div class="t-author"><div class="avatar">HE</div><div><strong>Helen E.</strong><small>🇳🇬🇦🇺 CLB 6 → 10 | Australia PR · 2-Week Coaching</small></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"I needed CLB 10 for nursing licensing. In 2 weeks of personalised sessions, my coach identified exactly where I was losing marks. I hit CLB 10 on my first attempt — God bless Tovian!"</blockquote>
+          <div class="t-author"><div class="avatar">BO</div><div><strong>Blessing O.</strong><small>🇳🇬🏥 CLB 4 → 10 | Nursing License · 2-Week Coaching</small></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Very professional, very structured. I got a personalised study plan and feedback after every mock session. 2 weeks of focused coaching — worth every kobo. My Canada PR is approved and I am moving!"</blockquote>
+          <div class="t-author"><div class="avatar">JW</div><div><strong>James W.</strong><small>🇨🇦 CLB 7 → 12 | Max CRS Points · 2-Week Coaching</small></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"After 2 weeks of personalised coaching on Zoom, the CELPIP speaking section felt easy. My coach was patient, encouraging, and so knowledgeable. CLB 9 secured and Australia visa approved!"</blockquote>
+          <div class="t-author"><div class="avatar">FB</div><div><strong>Funmi B.</strong><small>🇳🇬🇦🇺 CLB 6 → 9 | Australia Nominated · 2-Week Coaching</small></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"I failed twice before finding Tovian. Just 2 weeks of personalised coaching changed everything. The reading and listening tips alone were game-changing. CLB 8 achieved — I am now a Canadian citizen!"</blockquote>
+          <div class="t-author"><div class="avatar">CN</div><div><strong>Chidi N.</strong><small>🇳🇬🇨🇦 CLB 5 → 8 | Canadian Citizen · 2-Week Coaching</small></div></div>
+        </div>
       </div>
       <div class="testi-ctrl">
         <button class="t-btn" id="prevBtn">&#8592;</button>
@@ -384,14 +558,19 @@ blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.
   </div>
 </section>
 
+<!-- BOOKING -->
 <section id="booking" style="padding:7rem 0;background:linear-gradient(155deg,#EEF3FF 0%,#E6F4E8 45%,#FFF8EC 100%);position:relative;overflow:hidden;">
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(26,43,94,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(26,43,94,.04) 1px,transparent 1px);background-size:50px 50px;pointer-events:none"></div>
   <div class="container" style="position:relative">
+
+    <!-- HEADER -->
     <div class="sec-hdr reveal" style="margin-bottom:3rem">
       <span class="tag">Book a Session</span>
       <h2>Ready to Hit <em>Your Target Score?</em></h2>
       <p>Join 50+ students who have already transformed their CELPIP scores. Book your free 30-minute consultation — no payment required.</p>
     </div>
+
+    <!-- PERKS ROW -->
     <div class="reveal" style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-bottom:3.5rem">
       <div style="display:flex;align-items:center;gap:.6rem;background:#fff;border:1.5px solid rgba(26,43,94,.1);border-radius:100px;padding:.5rem 1.2rem;font-size:.88rem;font-weight:600;color:var(--navy);box-shadow:var(--sh)"><span style="color:var(--green);font-weight:800">✓</span> Free 30-min consultation</div>
       <div style="display:flex;align-items:center;gap:.6rem;background:#fff;border:1.5px solid rgba(26,43,94,.1);border-radius:100px;padding:.5rem 1.2rem;font-size:.88rem;font-weight:600;color:var(--navy);box-shadow:var(--sh)"><span style="color:var(--green);font-weight:800">✓</span> Personalised score gap analysis</div>
@@ -399,33 +578,45 @@ blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.
       <div style="display:flex;align-items:center;gap:.6rem;background:#fff;border:1.5px solid rgba(26,43,94,.1);border-radius:100px;padding:.5rem 1.2rem;font-size:.88rem;font-weight:600;color:var(--navy);box-shadow:var(--sh)"><span style="color:var(--green);font-weight:800">✓</span> Zoom or Microsoft Teams</div>
       <div style="display:flex;align-items:center;gap:.6rem;background:#fff;border:1.5px solid rgba(26,43,94,.1);border-radius:100px;padding:.5rem 1.2rem;font-size:.88rem;font-weight:600;color:var(--navy);box-shadow:var(--sh)"><span style="color:var(--green);font-weight:800">✓</span> Available worldwide</div>
     </div>
+
+    <!-- MAIN CTA CARD -->
     <div class="reveal" style="max-width:680px;margin:0 auto;background:#fff;border-radius:24px;padding:3.5rem 3rem;box-shadow:var(--sh-lg);border:1.5px solid rgba(26,43,94,.07);text-align:center;">
       <div style="font-size:3.5rem;margin-bottom:1rem;">📅</div>
       <h3 style="font-size:1.9rem;color:var(--navy);margin-bottom:.75rem;">Book Your Free Session</h3>
       <p style="color:var(--muted);font-size:1rem;margin-bottom:2rem;max-width:44ch;margin-left:auto;margin-right:auto;">Takes less than 2 minutes to fill. We'll reach out within 24 hours to confirm your slot.</p>
+
       <a href="https://docs.google.com/forms/d/e/1FAIpQLScKgVTj3tcXmrQ7EA3gn5xW-7ThafWpyUhQ2LAX1VUgSIvOlQ/viewform" target="_blank" rel="noopener"
-        style="display:inline-flex;align-items:center;justify-content:center;gap:.6rem;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:1.1rem 2.8rem;border-radius:100px;font-size:1.05rem;font-weight:700;text-decoration:none;box-shadow:0 8px 28px rgba(26,43,94,.28);margin-bottom:1.5rem;">
+        style="display:inline-flex;align-items:center;justify-content:center;gap:.6rem;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:1.1rem 2.8rem;border-radius:100px;font-size:1.05rem;font-weight:700;text-decoration:none;box-shadow:0 8px 28px rgba(26,43,94,.28);transition:all .3s ease;margin-bottom:1.5rem;"
+        onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 36px rgba(26,43,94,.36)'"
+        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 28px rgba(26,43,94,.28)'">
         📋 Fill Booking Form — It's Free
       </a>
+
       <div style="display:flex;align-items:center;gap:1rem;margin:1.5rem 0;color:var(--muted);font-size:.85rem;font-weight:600;">
         <div style="flex:1;height:1px;background:var(--light)"></div>
         OR REACH US DIRECTLY
         <div style="flex:1;height:1px;background:var(--light)"></div>
       </div>
+
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;background:var(--wa);color:#fff;padding:.8rem 1.6rem;border-radius:100px;font-size:.92rem;font-weight:700;text-decoration:none;">
+        <a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank" rel="noopener"
+          style="display:inline-flex;align-items:center;gap:.5rem;background:var(--wa);color:#fff;padding:.8rem 1.6rem;border-radius:100px;font-size:.92rem;font-weight:700;text-decoration:none;box-shadow:0 6px 20px rgba(37,211,102,.35);">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           WhatsApp Us
         </a>
-        <a href="tel:+2348104053137" style="display:inline-flex;align-items:center;gap:.5rem;background:var(--light);color:var(--navy);padding:.8rem 1.6rem;border-radius:100px;font-size:.92rem;font-weight:700;text-decoration:none;border:1.5px solid rgba(26,43,94,.12);">
+        <a href="tel:+2348104053137"
+          style="display:inline-flex;align-items:center;gap:.5rem;background:var(--light);color:var(--navy);padding:.8rem 1.6rem;border-radius:100px;font-size:.92rem;font-weight:700;text-decoration:none;border:1.5px solid rgba(26,43,94,.12);">
           📞 Call Us Now
         </a>
       </div>
+
       <p style="font-size:.78rem;color:var(--muted);margin-top:1.5rem;">We respond within 24 hours · Sessions via Zoom or Teams · Available Mon–Fri 9am–10pm WAT</p>
     </div>
+
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer id="footer">
   <div class="container">
     <div class="footer-inner">
@@ -434,16 +625,43 @@ blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.
         <p>Nigeria's trusted CELPIP coaching service — helping students achieve their target score for Canada PR, Australia PR, and professional licensing.</p>
         <div class="footer-flags">🇨🇦🇦🇺🇳🇬🇬🇧</div>
         <div class="socials">
-          <a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank" rel="noopener" class="soc-wa">
+          <a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank" rel="noopener" aria-label="WhatsApp" class="soc-wa">
             <svg width="20" height="20" viewBox="0 0 24 24" class="wa-svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           </a>
-          <a href="mailto:lolaoluwatoyin@gmail.com">📧</a>
-          <a href="tel:+2348104053137">📞</a>
+          <a href="javascript:void(0)" onclick="window.location.href='mai'+'lto:lolaoluwatoyin'+'@'+'gmail.com'" aria-label="Email">📧</a>
+          <a href="tel:+2348104053137" aria-label="Phone">📞</a>
         </div>
       </div>
-      <div class="fl"><h5>Services</h5><ul><li><a href="#about">Listening Coaching</a></li><li><a href="#about">Reading Coaching</a></li><li><a href="#about">Writing Coaching</a></li><li><a href="#about">Speaking Coaching</a></li><li><a href="#about">Full Prep Package</a></li></ul></div>
-      <div class="fl"><h5>CELPIP For</h5><ul><li><a href="#recognition">🇨🇦 Canada PR</a></li><li><a href="#recognition">🇦🇺 Australia PR</a></li><li><a href="#recognition">Canadian Citizenship</a></li><li><a href="#recognition">Nursing Licensing</a></li><li><a href="#recognition">Engineering (PEng)</a></li></ul></div>
-      <div class="fl"><h5>Contact Us</h5><ul><li><a href="mailto:lolaoluwatoyin@gmail.com">lolaoluwatoyin@gmail.com</a></li><li><a href="tel:+2348104053137">+234 810 405 3137</a></li><li><a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank">WhatsApp Us</a></li><li><span>Mon–Fri, 9am–10pm WAT</span></li><li><span>Sessions via Zoom or Teams</span></li></ul></div>
+      <div class="fl">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#about">Listening Coaching</a></li>
+          <li><a href="#about">Reading Coaching</a></li>
+          <li><a href="#about">Writing Coaching</a></li>
+          <li><a href="#about">Speaking Coaching</a></li>
+          <li><a href="#about">Full Prep Package</a></li>
+        </ul>
+      </div>
+      <div class="fl">
+        <h5>CELPIP For</h5>
+        <ul>
+          <li><a href="#recognition">🇨🇦 Canada PR</a></li>
+          <li><a href="#recognition">🇦🇺 Australia PR</a></li>
+          <li><a href="#recognition">Canadian Citizenship</a></li>
+          <li><a href="#recognition">Nursing Licensing</a></li>
+          <li><a href="#recognition">Engineering (PEng)</a></li>
+        </ul>
+      </div>
+      <div class="fl">
+        <h5>Contact Us</h5>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="window.location.href='mai'+'lto:lolaoluwatoyin'+'@'+'gmail.com'">lolaoluwatoyin&#64;gmail&#46;com</a></li>
+          <li><a href="tel:+2348104053137">+234 810 405 3137</a></li>
+          <li><a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank">WhatsApp Us</a></li>
+          <li><span>Mon–Fri, 9am–10pm WAT</span></li>
+          <li><span>Sessions via Zoom or Teams</span></li>
+        </ul>
+      </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Tovian Educational Consult. All rights reserved.</p>
@@ -452,34 +670,57 @@ blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.
   </div>
 </footer>
 
-<a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank" rel="noopener" class="floating-wa" id="floatingWa">
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/qr/D7XO5P2YCTPEL1" target="_blank" rel="noopener" class="floating-wa" id="floatingWa" aria-label="Chat on WhatsApp">
   <svg width="30" height="30" viewBox="0 0 24 24" class="wa-svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   <span class="wa-tip">Chat on WhatsApp</span>
 </a>
 
 <script>
+// NAVBAR
 const navbar=document.getElementById('navbar');
 const floatingWa=document.getElementById('floatingWa');
 window.addEventListener('scroll',()=>{
   navbar.classList.toggle('scrolled',window.scrollY>60);
   floatingWa.classList.toggle('visible',window.scrollY>400);
 });
+
+// MOBILE NAV
 const burger=document.getElementById('burger');
 const navLinks=document.getElementById('navLinks');
 burger.addEventListener('click',()=>navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
 document.addEventListener('click',e=>{if(!navbar.contains(e.target))navLinks.classList.remove('open')});
+
+// SCROLL REVEAL
 const ro=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+// TESTIMONIAL SLIDER
 const track=document.getElementById('testiTrack');
 const dotsWrap=document.getElementById('testiDots');
 const cards=[...track.querySelectorAll('.testi-card')];
 let cur=0;
 function vis(){return window.innerWidth<=768?1:window.innerWidth<=960?2:3}
 let vc=vis();
-function buildDots(){dotsWrap.innerHTML='';const total=Math.ceil(cards.length/vc);for(let i=0;i<total;i++){const d=document.createElement('button');d.className='dot'+(i===cur?' active':'');d.addEventListener('click',()=>go(i));dotsWrap.appendChild(d);}}
+function buildDots(){
+  dotsWrap.innerHTML='';
+  const total=Math.ceil(cards.length/vc);
+  for(let i=0;i<total;i++){
+    const d=document.createElement('button');
+    d.className='dot'+(i===cur?' active':'');
+    d.addEventListener('click',()=>go(i));
+    dotsWrap.appendChild(d);
+  }
+}
 function updDots(){dotsWrap.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===cur))}
-function go(idx){const max=Math.ceil(cards.length/vc)-1;cur=Math.max(0,Math.min(idx,max));const w=cards[0].offsetWidth+24;track.style.transform=`translateX(-${cur*vc*w}px)`;updDots();}
+function go(idx){
+  const max=Math.ceil(cards.length/vc)-1;
+  cur=Math.max(0,Math.min(idx,max));
+  const w=cards[0].offsetWidth+24;
+  track.style.transform=`translateX(-${cur*vc*w}px)`;
+  updDots();
+}
 document.getElementById('prevBtn').addEventListener('click',()=>go(cur-1));
 document.getElementById('nextBtn').addEventListener('click',()=>{const max=Math.ceil(cards.length/vc)-1;go(cur>=max?0:cur+1)});
 let ap=setInterval(()=>{const max=Math.ceil(cards.length/vc)-1;go(cur>=max?0:cur+1)},5500);
@@ -487,9 +728,45 @@ track.addEventListener('mouseenter',()=>clearInterval(ap));
 track.addEventListener('mouseleave',()=>{ap=setInterval(()=>{const max=Math.ceil(cards.length/vc)-1;go(cur>=max?0:cur+1)},5500)});
 window.addEventListener('resize',()=>{vc=vis();cur=0;buildDots();go(0)});
 buildDots();
-function countUp(el,target,suffix){const dur=2000,start=performance.now();(function tick(now){const p=Math.min((now-start)/dur,1);const ease=1-Math.pow(1-p,3);el.textContent=Math.round(ease*target)+suffix;if(p<1)requestAnimationFrame(tick)})(start);}
+
+// DATE MIN
+const di=document.getElementById('dateInput');
+if(di)di.min=new Date().toISOString().split('T')[0];
+
+// FORM
+const form=document.getElementById('bookingForm');
+const succ=document.getElementById('formSuccess');
+form.addEventListener('submit',e=>{
+  if(form.action.includes('YOUR_FORM_ID')){
+    e.preventDefault();
+    const btn=form.querySelector('[type="submit"]');
+    btn.textContent='Sending...';btn.disabled=true;
+    setTimeout(()=>{form.style.display='none';succ.classList.add('show')},1400);
+  } else {
+    form.querySelector('[type="submit"]').textContent='Sending...';
+  }
+});
+
+// COUNTER ANIMATION
+function countUp(el,target,suffix){
+  const dur=2000,start=performance.now();
+  (function tick(now){
+    const p=Math.min((now-start)/dur,1);
+    const ease=1-Math.pow(1-p,3);
+    el.textContent=Math.round(ease*target)+suffix;
+    if(p<1)requestAnimationFrame(tick);
+  })(start);
+}
 const statsEl=document.querySelector('.hero-stats');
-if(statsEl){new IntersectionObserver(entries=>{if(entries[0].isIntersecting){countUp(document.getElementById('cntStudents'),50,'+');countUp(document.getElementById('cntPass'),96,'%');countUp(document.getElementById('cntYears'),5,'+');}},{threshold:.5}).observe(statsEl);}
+if(statsEl){
+  new IntersectionObserver(entries=>{
+    if(entries[0].isIntersecting){
+      countUp(document.getElementById('cntStudents'),50,'+');
+      countUp(document.getElementById('cntPass'),96,'%');
+      countUp(document.getElementById('cntYears'),5,'+');
+    }
+  },{threshold:.5}).observe(statsEl);
+}
 </script>
 </body>
 </html>
