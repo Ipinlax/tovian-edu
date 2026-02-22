@@ -19,7 +19,6 @@ navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
-// Close nav when clicking outside
 document.addEventListener('click', (e) => {
   if (!navbar.contains(e.target)) {
     navLinks.classList.remove('open');
@@ -85,7 +84,6 @@ nextBtn.addEventListener('click', () => {
   goTo(currentIndex >= maxIndex ? 0 : currentIndex + 1);
 });
 
-// Auto-play
 let autoplay = setInterval(() => {
   const maxIndex = Math.ceil(cards.length / visibleCount) - 1;
   goTo(currentIndex >= maxIndex ? 0 : currentIndex + 1);
@@ -112,21 +110,13 @@ buildDots();
 
 // ── BOOKING FORM ──
 const form = document.getElementById('bookingForm');
-const formSuccess = document.getElementById('formSuccess');
 
-// Set minimum date
 const dateInput = document.getElementById('date');
 if (dateInput) {
   dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
 }
 
 form.addEventListener('submit', function() {
-  const btn = form.querySelector('[type="submit"]');
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-});
-  // Otherwise let Formspree handle the submission naturally
-  // (don't preventDefault so the form posts to Formspree)
   const btn = form.querySelector('[type="submit"]');
   btn.textContent = 'Sending...';
   btn.disabled = true;
